@@ -58,10 +58,10 @@
 // // when the url changes
 // export default withRouter(connect(mapState, mapDispatch)(Routes))
 
-import React from 'react'
+import React from 'react';
 
 function Routes() {
-  return <div></div>
+  return <div></div>;
 }
 
-export default Routes
+export default Routes;

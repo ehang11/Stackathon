@@ -1,10 +1,10 @@
-import React from 'react'
-import Routes from './Routes'
-import Nav from './components/Nav'
-import Intro from './components/intro/Intro'
-import Portfolio from './components/portfolio/Portfolio'
-import Works from './components/works/Work'
-import Contacts from './components/contact/Contact'
+import React from 'react';
+import Routes from './Routes';
+import Nav from './components/Nav';
+import Intro from './components/intro/Intro';
+import Portfolio from './components/portfolio/Portfolio';
+import Works from './components/works/Work';
+import Contacts from './components/contact/Contact';
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
         <Contacts />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
