@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
-import Routes from './Routes';
-import Nav from './components/Nav';
+
+import Nav from './components/navbar/Nav';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
 import Works from './components/works/Work';
 import Contacts from './components/contact/Contact';
+import Menu from './components/navbar/Menu';
+import Scroll from 'react-scroll';
+const ScrollLink = Scroll.ScrollLink;
 
-const App = () => {
-  const [isActive, setActive] = useState(true);
+function App() {
+  //active toggle with useState hook
+  const [isActive, setActive] = useState(false);
 
   return (
     <div className="app">
       <Nav isActive={isActive} setActive={setActive} />
+      <Menu isActive={isActive} setActive={setActive} />
       <div className="sections">
         <Intro />
         <Portfolio />
@@ -20,6 +25,6 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
 
 export default App;

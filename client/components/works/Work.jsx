@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Work() {
-  return <div>Work</div>;
+  return (
+    <div className="works" id="works">
+      Work
+    </div>
+  );
 }
 
 export default Work;
