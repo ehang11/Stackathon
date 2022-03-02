@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import MailIcon from '@mui/icons-material/Mail';
 import PersonIcon from '@mui/icons-material/Person';
-function Nav() {
+function Nav({ isActive, setActive }) {
   //active toggle with useState hook
-  const [isActive, setActive] = useState(true);
+
   const toggleClass = () => {
     setActive(!isActive);
   };
