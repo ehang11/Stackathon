@@ -9513,13 +9513,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var ityped__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ityped */ "./node_modules/ityped/src/index.js");
+
 
 
 function Intro() {
+  var textRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    // console.log('view ityped-textRef----->', textRef);
+    (0,ityped__WEBPACK_IMPORTED_MODULE_1__.init)(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      //1.5s
+      backSpeed: 60,
+      strings: ['Software', 'Frontend', 'Fullstack']
+    });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "intro",
     id: "intro"
-  }, "Intro");
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "intro-left"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "img-profile"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "assets/profile_picture.png",
+    alt: "",
+    className: "intro-img-profile"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "intro-right"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "intro-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "intro-greeting"
+  }, "Hi there, I'm"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "intro-name"
+  }, "Eric Hang"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "intro-role"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    ref: textRef,
+    className: "subrole"
+  }), "Developer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "#portfolio"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "assets/down.png",
+    alt: "",
+    className: "intro-img-down"
+  }))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Intro);
@@ -9652,13 +9692,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 var Portfolio = function Portfolio() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('featured'),
+      _useState2 = _slicedToArray(_useState, 2),
+      selected = _useState2[0],
+      setSelected = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      data = _useState4[0],
+      setData = _useState4[1];
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "portfolio",
     id: "portfolio"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Portfolio"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "portfolio-list"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "li-active"
+  }, "Featured"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "E-Commerce Store"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Web App"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Web App"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Web App")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "portfolio-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "portfolio-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "assets/empty-project.png",
+    alt: "",
+    className: "portfolio-img"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "portfolio-title"
+  }, "In Vino Veritas")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "portfolio-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "assets/empty-project.png",
+    alt: "",
+    className: "portfolio-img"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "portfolio-title"
+  }, "Blank")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "portfolio-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "assets/empty-project.png",
+    alt: "",
+    className: "portfolio-img"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "portfolio-title"
+  }, "Project: Placeholder")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "portfolio-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "assets/empty-project.png",
+    alt: "",
+    className: "portfolio-img"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "portfolio-title"
+  }, "Project: Placeholder 2"))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Portfolio);
@@ -11216,6 +11316,119 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/ityped/src/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/ityped/src/index.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "init": () => (/* binding */ init)
+/* harmony export */ });
+/**
+ * @name setProps
+ * @description Set the ityped properties configuration
+ * @param {Object} config The configuration properties
+ * @return {Promise}
+ */
+const setProps = ({
+  strings = ['Put your strings here...', 'and Enjoy!'],
+  typeSpeed = 100,
+  backSpeed = 50,
+  backDelay = 500,
+  startDelay = 500,
+  cursorChar = '|',
+  placeholder = false,
+  showCursor = true,
+  disableBackTyping = false,
+  onFinished = function () { },
+  loop = true
+}) => ({
+  strings,
+  typeSpeed,
+  backSpeed,
+  cursorChar,
+  backDelay,
+  placeholder,
+  startDelay,
+  showCursor,
+  loop,
+  disableBackTyping,
+  onFinished
+})
+
+const init = (element, properties) => {
+  let i = 0, l, STRINGS_TO_ITERATE;
+
+  const typewrite = (strings, props) => {
+    if (i === l)
+      if (props.loop) i = 0;
+    setTimeout(() => { typeString(strings[i], props); }, props.startDelay);
+  }
+
+  const typeString = (str, props) => {
+    let index = 0,
+      strLen = str.length;
+    let intervalID = setInterval(() => {
+      props.placeholder ? element.placeholder += str[index] : element.textContent += str[index];
+      if (++index === strLen) return onStringTyped(intervalID, props);
+    }, props.typeSpeed);
+  }
+
+  const onStringTyped = (id, props) => {
+    clearInterval(id);
+    if (props.disableBackTyping && i === l - 1) {
+      return props.onFinished()
+    }
+    if (!props.loop && i === l - 1) {
+      return props.onFinished();
+    }
+    setTimeout(() => eraseString(props), props.backDelay);
+  }
+
+  const eraseString = (props) => {
+    let str = props.placeholder ? element.placeholder : element.textContent,
+      strLen = str.length;
+    let intervalID = setInterval(() => {
+      props.placeholder
+        ? element.placeholder = element.placeholder.substr(0, --strLen)
+        : element.textContent = str.substr(0, --strLen);
+      if (strLen === 0) return onStringErased(intervalID, props);
+    }, props.backSpeed);
+  }
+
+  const onStringErased = (id, props) => {
+    clearInterval(id);
+    ++i;
+    typewrite(STRINGS_TO_ITERATE, props);
+  }
+
+  const setCursor = (element, props) => {
+    let cursorSpan = document.createElement('span');
+    cursorSpan.classList.add('ityped-cursor');
+    cursorSpan.textContent = '|';
+    cursorSpan.textContent = props.cursorChar;
+    element.insertAdjacentElement('afterend', cursorSpan);
+  }
+
+
+  const startTyping = (prop) => {
+    let props = setProps(prop || {})
+    let strings = props.strings
+    STRINGS_TO_ITERATE = strings
+    l = strings.length
+    if (typeof element === "string") element = document.querySelector(element)
+    if (props.showCursor) setCursor(element, props)
+    typewrite(strings, props)
+  }
+
+  return startTyping(properties)
+}
 
 /***/ }),
 

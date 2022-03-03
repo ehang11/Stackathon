@@ -59,6 +59,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "esm": "^3.2.25",
     "html-loader": "^3.1.0",
+    "ityped": "^1.0.3",
     "mocha": "^9.2.1",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",

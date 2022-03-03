@@ -3,6 +3,35 @@
   margin: 0;
   overflow-x: hidden;
 }
+:root {
+  /*---------------------------------------------Themes--------------------------------------------- */
+  /* Reference: https://visme.co/blog/website-color-schemes */
+  /* example: background-color: var(--main-dark) */
+  --main-dark: #202124;
+  --main-light: #d6d6d7;
+  --main-secondary: #323639;
+  --main-accent1: #fc4445;
+  --main-accent2: whitesmoke;
+
+  /*Theme 2: Colorful-Balanced*/
+  --theme2-primary: #41b3a3;
+  --theme2-text: white;
+  --theme2-secondary: #e27d60;
+  --theme2-accent1: #c38d9e;
+
+  /*Theme 3: Cool-Fresh*/
+  --theme3-primary: #5cdb95;
+  --theme3-text: #05386b;
+  --theme3-secondary: #edf5e1;
+  --theme3-accent1: #379683;
+
+  /*Theme 4: Audacious-Vibrant */
+  --theme4-primary: #3feee6;
+  --theme4-text: #cafafe;
+  --theme4-secondary: #fc4445;
+  --theme4-accent1: #97caef;
+}
+
 /* ------------------------------------------------APP------------------------------------------------ */
 .app {
   height: 100vh;
@@ -13,7 +42,7 @@
 /* ------------------------------------------------SECTIONS------------------------------------------------ */
 .sections {
   width: 100%;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 80px);
   background-color: lightsalmon;
   position: relative;
   top: 70px;
@@ -29,7 +58,7 @@
 /* -----------------------------CHILD OF SECTIONS----------------------------- */
 .sections > * {
   width: 100vw;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 80px);
   scroll-snap-align: start;
 }
 
@@ -55,12 +84,7 @@
   display: flex;
   align-items: center;
 }
-.logo {
-  font-size: 40px;
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
-}
+
 .nav-left > .logo {
   font-size: 40px;
   font-weight: 700;
@@ -96,7 +120,7 @@
 .hamburger > span {
   width: 100%;
   height: 3px;
-  background-color: black;
+  background-color: var(--main-dark);
   transform-origin: left;
   transition: all 2s ease;
 }
@@ -118,7 +142,7 @@
 .menu-active {
   width: 300px;
   height: 100vh;
-  background-color: black;
+  background-color: var(--main-dark);
   position: fixed;
   top: 0;
   right: 0;
@@ -135,7 +159,7 @@
   list-style: none;
   font-size: 40px;
   font-weight: 300;
-  color: white;
+  color: var(--main-light);
   width: 60%;
 }
 .menu-ul > li {
@@ -157,8 +181,8 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  background-color: black;
-  color: white;
+  background-color: var(--main-dark);
+  color: var(--main-light);
 }
 .hamburger-active > span {
   width: 100%;
@@ -183,12 +207,155 @@
 /* -----------------------------_CHILD OF SECTIONS_----------------------------- */
 /* -----------------------------Intro CSS----------------------------- */
 .intro {
-  background-color: lightcoral;
+  background-color: white;
+  display: flex;
+  padding-top: 30px;
+}
+.intro > .intro-left {
+  flex: 0.5;
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+.img-profile {
+  width: 100vh;
+  height: 100vh;
+  background-color: var(--main-accent1);
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+}
+.img-profile > img {
+  height: 90%;
+  /* optional: image filters available via https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness() */
+  filter: brightness(1.25);
+}
+.intro > .intro-right {
+  flex: 0.5;
+  position: relative;
+}
+.intro-right > .intro-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.intro-wrapper > .intro-greeting {
+  font-size: 35px;
+  word-spacing: 12px;
+}
+.intro-wrapper > .intro-name {
+  font-size: 65px;
+  margin: 10px 0;
+  word-spacing: 10px;
+}
+
+.intro-wrapper > .intro-role {
+  font-size: 30px;
+  word-spacing: 12px;
+}
+.intro-right > a {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+.intro-role > .subrole {
+  font-size: inherit;
+  color: var(--main-accent1);
+}
+.ityped-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+a > .intro-img-down {
+  width: 30px;
+  padding-bottom: 2vh;
+  animation: arrowBlink 3s infinite;
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
 }
 /* -----------------------------_Intro CSS_----------------------------- */
 /* -----------------------------Portfolio CSS----------------------------- */
 .portfolio {
-  background-color: lightskyblue;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio > h1 {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.portfolio > li {
+  font-size: 12px;
+  margin-right: 50px;
+  padding: 0.7px;
+}
+.portfolio > .portfolio-list {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.portfolio-list > li {
+  font-size: 14px;
+  margin-right: 50px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.portfolio-list > .li-active {
+  background-color: var(--main-dark);
+  color: var(--main-light);
+}
+.portfolio-container {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.portfolio-container > .portfolio-item {
+  width: 220px;
+  height: 150px;
+  border-radius: 20px;
+  border: 1px solid var(--main-secondary);
+  margin: 10px 20px;
+  color: var(--main-accent2);
+  position: relative;
+}
+.portfolio-item > .portfolio-title {
+  position: absolute;
+  font-size: 20px;
+}
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.portfolio-container > .portfolio-item:hover {
+  background-color: var(--main-dark);
+}
+.portfolio-container > .portfolio-img.hover {
+  opacity: 0.2;
+  z-index: 0;
 }
 /* ----------------------------_Portfolio CSS_----------------------------- */
 /* ----------------------------Contact CSS---------------------------- */
