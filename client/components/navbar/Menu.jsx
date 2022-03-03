@@ -11,7 +11,7 @@ function Menu({ isActive, setActive }) {
           <a href="#portfolio">Portfolio</a>
         </li>
         <li onClick={() => setActive(false)}>
-          <a href="#works">Works</a>
+          <a href="#work">Works</a>
         </li>
         <li onClick={() => setActive(false)}>
           <a href="#contact">Contact</a>

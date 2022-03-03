@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Nav from './components/navbar/Nav';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
-import Works from './components/works/Work';
+import Work from './components/works/Work';
 import Contacts from './components/contact/Contact';
 import Menu from './components/navbar/Menu';
 import Scroll from 'react-scroll';
@@ -20,7 +20,7 @@ function App() {
       <div className="sections">
         <Intro />
         <Portfolio />
-        <Works />
+        <Work />
         <Contacts />
       </div>
     </div>

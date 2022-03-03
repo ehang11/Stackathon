@@ -19,8 +19,8 @@ const Portfolio = () => {
           <h3 className="portfolio-title">In Vino Veritas</h3>
         </div>
         <div className="portfolio-item">
-          <img src="assets/empty-project.png" alt="" className="portfolio-img" />
           <h3 className="portfolio-title">Blank</h3>
+          <img src="assets/empty-project.png" alt="" className="portfolio-img" />
         </div>
         <div className="portfolio-item">
           <img src="assets/empty-project.png" alt="" className="portfolio-img" />

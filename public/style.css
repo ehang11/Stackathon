@@ -5,27 +5,34 @@
 }
 :root {
   /*---------------------------------------------Themes--------------------------------------------- */
-  /* Reference: https://visme.co/blog/website-color-schemes */
-  /* example: background-color: var(--main-dark) */
+  /* ----Reference: https://visme.co/blog/website-color-schemes---- */
+  /* ----example: background-color: var(--main-dark)---- */
+  /* ----primary used for: default nav, hamburger,menu---- */
+  /* ----secondary used for:  nav:active,hamburger:active, menu: active---- */
+  /* ----accent1 used for: profile bgd, ityped subrole---- */
+  /* ----accent2: misc---- */
+
+  /* @@@Theme 1: KARD. default@@@ */
   --main-dark: #202124;
   --main-light: #d6d6d7;
   --main-secondary: #323639;
   --main-accent1: #fc4445;
   --main-accent2: whitesmoke;
+  --main-accent3: rgb(142, 27, 27);
 
-  /*Theme 2: Colorful-Balanced*/
+  /* @@@Theme 2: Colorful-Balanced@@@ */
   --theme2-primary: #41b3a3;
   --theme2-text: white;
   --theme2-secondary: #e27d60;
   --theme2-accent1: #c38d9e;
 
-  /*Theme 3: Cool-Fresh*/
+  /* @@@Theme 3: Cool-Fresh@@@ */
   --theme3-primary: #5cdb95;
   --theme3-text: #05386b;
   --theme3-secondary: #edf5e1;
   --theme3-accent1: #379683;
 
-  /*Theme 4: Audacious-Vibrant */
+  /* @@@Theme 4: Audacious-Vibrant@@@ */
   --theme4-primary: #3feee6;
   --theme4-text: #cafafe;
   --theme4-secondary: #fc4445;
@@ -67,7 +74,6 @@
   width: 100%;
   height: 70px;
   background-color: white;
-
   position: fixed;
   top: 0;
   z-index: 3;
@@ -245,7 +251,7 @@
 }
 .intro-wrapper > .intro-greeting {
   font-size: 35px;
-  word-spacing: 12px;
+  word-spacing: 6px;
 }
 .intro-wrapper > .intro-name {
   font-size: 65px;
@@ -255,7 +261,7 @@
 
 .intro-wrapper > .intro-role {
   font-size: 30px;
-  word-spacing: 12px;
+  word-spacing: 6px;
 }
 .intro-right > a {
   position: absolute;
@@ -297,10 +303,10 @@ a > .intro-img-down {
   align-items: center;
 }
 .portfolio > h1 {
-  margin: 10px;
-  padding: 0;
+  padding-bottom: 3vh;
   list-style: none;
   display: flex;
+  font-size: 50px;
 }
 .portfolio > li {
   font-size: 12px;
@@ -309,15 +315,16 @@ a > .intro-img-down {
 }
 .portfolio > .portfolio-list {
   margin: 10px;
-  padding: 0;
+
+  padding-bottom: 1vh;
   list-style: none;
   display: flex;
 }
 .portfolio-list > li {
-  font-size: 14px;
+  font-size: 16px;
   margin-right: 50px;
-  padding: 7px;
-  border-radius: 10px;
+  padding: 8px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .portfolio-list > .li-active {
@@ -325,45 +332,200 @@ a > .intro-img-down {
   color: var(--main-light);
 }
 .portfolio-container {
-  width: 75%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
-.portfolio-container > .portfolio-item {
+.portfolio-item {
   width: 220px;
   height: 150px;
   border-radius: 20px;
   border: 1px solid var(--main-secondary);
   margin: 10px 20px;
-  color: var(--main-accent2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-secondary);
   position: relative;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 .portfolio-item > .portfolio-title {
   position: absolute;
   font-size: 20px;
 }
-.portfolio-img {
+.portfolio-item > .portfolio-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 1;
 }
-.portfolio-container > .portfolio-item:hover {
-  background-color: var(--main-dark);
+.portfolio-item:hover {
+  background-color: var(--main-secondary);
 }
-.portfolio-container > .portfolio-img.hover {
+.portfolio-item > .portfolio-img:hover {
   opacity: 0.2;
   z-index: 0;
 }
 /* ----------------------------_Portfolio CSS_----------------------------- */
+/* ----------------------------Works CSS---------------------------- */
+
+.work {
+  background-color: var(--main-accent1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.work > .work-arrow {
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.work-arrow > .work-arrow-left {
+  left: 100px;
+  transform: rotateY(180deg);
+}
+.work-arrow > .work-arrow-right {
+  right: 100px;
+}
+.work-slider {
+  height: 350px;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease-out;
+}
+.work > .work-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-container > .work-container-item {
+  width: 700px;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-left {
+  flex: 4;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-left > .work-leftContainer {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work-leftContainer > .work-imgContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(245, 179, 155);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-imgContainer > img {
+  width: 25px;
+}
+.work-container-item > .work-right {
+  flex: 8;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.work-right > img {
+  width: 400px;
+  transform: rotate(-10deg);
+}
+.work-leftContainer > h2 {
+  font-size: 20px;
+}
+.work-leftContainer > p {
+  font-size: 13px;
+}
+.work-leftContainer > span {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* ---------------------------_Works CSS_--------------------------- */
+
 /* ----------------------------Contact CSS---------------------------- */
 .contact {
-  background-color: lightblue;
+  background-color: #effbff;
+  display: flex;
+}
+
+.contact > .contact-left {
+  flex: 1;
+  overflow: hidden;
+}
+.contact-left > img {
+  padding: 7vh;
+  justify-content: center;
+  height: 80%;
+}
+.contact > .contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-right > h2 {
+  font-size: 30px;
+}
+.contact-right > .work-form {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+input {
+  width: 300px;
+  height: 30px;
+  font-size: 14px;
+  border: none;
+}
+textarea {
+  width: 300px;
+  height: 200px;
+  font-size: 14px;
+  border: none;
+}
+button {
+  width: 180px;
+  height: 36px;
+  color: var(--main-accent2);
+  background-color: var(--main-accent1);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+span {
+  color: var(--main-accent3);
 }
 /* ---------------------------_Contact CSS_--------------------------- */
-.works {
-  background-color: lightgreen;
-}
 /* ------------------------------------------------_SECTIONS_------------------------------------------------ */

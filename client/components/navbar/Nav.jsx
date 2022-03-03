@@ -7,7 +7,7 @@ function Nav({ isActive, setActive }) {
       <div className={isActive ? 'wrapper-active' : 'wrapper'}>
         <div className="nav-left">
           <a href="#Intro" className="logo">
-            genius.
+            KARD.
           </a>
           <div className="itemContainer">
             <PersonIcon className="contact-icon" />
@@ -18,7 +18,7 @@ function Nav({ isActive, setActive }) {
             <span className="contact-span">e.h@outlook.com</span>
           </div>
         </div>
-        <h1> Hello</h1>
+
         <div className="nav-right">
           <div className={isActive ? 'hamburger-active' : 'hamburger'} onClick={() => setActive(!isActive)}>
             <span className={isActive ? 'line1-active' : 'line1'}></span>
