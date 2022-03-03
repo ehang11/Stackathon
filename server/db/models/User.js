@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const { STRING, INTEGER, ENUM } = Sequelize;
 const db = require('../db');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
@@ -8,41 +9,46 @@ const SALT_ROUNDS = 5;
 
 const User = db.define('user', {
   username: {
-    type: Sequelize.STRING,
+    type: STRING,
     unique: true,
     allowNull: false,
   },
   password: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   firstName: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   lastName: {
-    type: Sequelize.STRING,
-  },
-  phonenumber: {
-    type: Sequelize.INTEGER,
+    type: STRING,
   },
   email: {
-    type: Sequelize.STRING,
+    type: STRING,
+    unique: true,
+    allowNull: false,
+    validate: {
+      isEmail: true,
+    },
   },
-  primaryrole: {
-    type: Sequelize.STRING,
+  phoneNumber: {
+    type: INTEGER,
   },
-  subrole1: {
-    type: Sequelize.STRING,
+  primaryRole: {
+    type: STRING,
   },
-  subrole2: {
-    type: Sequelize.STRING,
+  subRole1: {
+    type: STRING,
   },
-  profile: {
-    type: Sequelize.STRING,
+  subRole2: {
+    type: STRING,
   },
-  theme: {
-    type: Sequelize.STRING,
-    defaultValue: 'KARD',
+  profilePicture: {
+    type: STRING,
   },
+  // theme: {
+  //   type: Sequelize.STRING,
+  //   defaultValue: 'KARD',
+  // },
 });
 
 module.exports = User;
@@ -81,7 +87,7 @@ User.findByToken = async function (token) {
     }
     return user;
   } catch (ex) {
-    const error = Error('bad token');
+    const error = Error('bad token when finding user by token');
     error.status = 401;
     throw error;
   }
