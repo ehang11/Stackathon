@@ -40,8 +40,8 @@ function App(props) {
       ) : (
         <Switch>
           <Route path="/" exact component={Greetings} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={SignUp} />
+          <Route path="/login/" component={Login} />
+          {/* <Route path="/create" component={SignUp} /> */}
         </Switch>
       )}
     </div>

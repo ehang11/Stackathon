@@ -5,16 +5,16 @@ function Menu({ isActive, setActive }) {
     <div className={isActive ? 'menu-active' : 'menu'}>
       <ul className="menu-ul">
         <li onClick={() => setActive(false)}>
-          <a href="#intro">Home</a>
+          <a href="intro">Home</a>
         </li>
         <li onClick={() => setActive(false)}>
-          <a href="#portfolio">Portfolio</a>
+          <a href="portfolio">Portfolio</a>
         </li>
         <li onClick={() => setActive(false)}>
-          <a href="#work">Works</a>
+          <a href="work">Works</a>
         </li>
         <li onClick={() => setActive(false)}>
-          <a href="#contact">Contact</a>
+          <a href="contact">Contact</a>
         </li>
       </ul>
     </div>

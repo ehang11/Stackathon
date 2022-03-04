@@ -1,10 +1,11 @@
 import React from 'react';
-
+import Signup from './signup/Signup';
+import CompleteProfile from './signup/CompleteProfile';
 function Greetings() {
   return (
     <div className="sections">
-      <div className="welcome-container " id="welcome">
-        <div className="welcome-left">
+      <div className="welcome-container" id="welcome">
+        <div className="welcome-top">
           <h1 className="welcome-title">GREETINGS.</h1>
           <div className="img-profile welcome">
             <img
@@ -14,11 +15,19 @@ function Greetings() {
           </div>
         </div>
 
-        <div className="welcome-right">
-          <div className="welcome-login"> LOGIN</div>
-          <div className="welcome-create">CREATE</div>
+        <div className="welcome-bottom">
+          <div className="welcome-bottom1">
+            <a href="login">LOGIN</a>
+          </div>
+
+          <div className="welcome-bottom2">
+            {' '}
+            <a href="create">CREATE </a>
+          </div>
         </div>
       </div>
+      <Signup />
+      {/* <CompleteProfile /> */}
     </div>
   );
 }

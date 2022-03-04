@@ -4,6 +4,12 @@
   overflow-x: hidden;
 }
 
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .work-arrow {
@@ -254,17 +260,20 @@
 .welcome-container {
   background-color: white;
   display: center;
-  margin: 30px;
   background-color: white;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-between;
 }
-.welcome-left {
-  width: 95%;
+.welcome-top {
+  width: 100%;
+  height: calc(700vh / 10);
   /* background-color: yellow; */
   overflow: hidden;
 }
 .img-profile.welcome {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   background-color: #ffffff;
   border: none;
   display: flex;
@@ -274,6 +283,7 @@
   transition: all 5s ease;
 }
 .welcome-title {
+  width: 20%;
   border: none;
   display: flex;
   align-items: flex-end;
@@ -287,19 +297,21 @@
   color: black;
 }
 
-.welcome-right {
+.welcome-bottom {
   /* background-color: yellow; */
   overflow: hidden;
-  width: 95%;
+  width: 100%;
+  height: calc(300vh / 10);
   justify-content: center;
   display: list-item;
   color: var(--main-dark);
 }
 
-.welcome-login {
+.welcome-bottom1 {
   display: block;
+  align-self: center;
+  height: calc(150vh / 15);
 
-  height: 50px;
   padding: 5px;
   color: black;
   font-size: 20px;
@@ -307,46 +319,82 @@
   text-decoration: line-through;
   justify-content: center;
   transform-origin: center;
-  transition: width 1s, height 2s, background-color 2s, transform 2s;
+  transition: width 1s, height 1s, background-color 2s, transform 2s;
 }
-.welcome-create {
+.welcome-bottom2 {
   display: block;
-
-  height: 50px;
-  padding: 5px;
+  align-self: center;
+  height: calc(150vh / 15);
+  width: 100%;
   color: black;
   font-size: 20px;
   text-align: center;
   text-decoration: line-through;
   justify-content: center;
   transform-origin: center;
-  transition: width 1s, height 2s, background-color 2s, transform 2s;
+  /* transition: width 1s, background-color 2s, color 3s, transform 2s; */
+  transition: all 2s ease;
+  -webkit-transition: all 2s ease;
 }
 
-.welcome-create:hover {
+.welcome-bottom2:hover {
   background-color: var(--main-secondary);
   color: white;
   width: 100%;
-  height: 150px;
-  padding: 5px;
+  max-height: calc(150vh / 10);
+  padding-top: 5px;
   font-weight: 500;
   font-size: 25px;
   text-align: center;
   text-decoration: none;
   justify-content: center;
+  align-self: center;
+  cursor: pointer;
 }
 
-.welcome-login:hover {
-  background-color: var(--main-dark);
-  color: white;
+.welcome-bottom1:hover {
+  /* background-color: var(--main-dark);
+  color: white; */
+  color: black;
   width: 100%;
-  height: 150px;
+  height: calc(150vh / 12);
   padding: 5px;
   font-weight: 500;
   font-size: 25px;
   text-decoration: none;
   justify-content: center;
+  align-self: center;
+  color: inherit;
+  cursor: pointer;
 }
+
+.welcome-bottom2 > .welcome-img-down {
+  width: 0px;
+  height: 0px;
+  display: block;
+  align-self: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.welcome-bottom2:hover > .welcome-img-down {
+  width: 30px;
+  height: 30px;
+
+  position: fixed;
+  bottom: 20px;
+  display: block;
+  align-self: center;
+  justify-content: center;
+  align-self: center;
+  animation: arrowBlink 3s infinite;
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}
+
 /* -----------------------------LOGIN CSS----------------------------- */
 .img-profile.login {
   width: 100%;
@@ -374,7 +422,6 @@
 }
 .img-profile.login:hover {
   background-color: #fc4445;
-
   border: none;
 }
 /* .welcome-back:hover {
@@ -549,6 +596,23 @@ a > .intro-img-down {
   justify-content: center;
   position: relative;
 }
+.work-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-container-item {
+  width: 50vw;
+  height: 100%;
+  background-color: var(--main-accent4);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .work-container-item > .work-left {
   flex: 4;
   height: 80%;
@@ -585,21 +649,6 @@ a > .intro-img-down {
   left: 0;
   transition: all 1s ease-out;
 }
-.work-container {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.work-container-item {
-  width: 50vw;
-  height: 100%;
-  background-color: var(--main-accent4);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .work-leftContainer {
   width: 90%;
@@ -621,6 +670,7 @@ a > .intro-img-down {
 .work-imgContainer > img {
   width: 4vw;
   padding: 2vw;
+  border-radius: 50%;
 }
 
 .work-right > img {

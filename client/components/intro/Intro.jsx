@@ -15,7 +15,7 @@ function Intro() {
   }, []);
 
   return (
-    <div className="intro" id="intro">
+    <div className="intro" id="/intro">
       <div className="intro-left">
         <div className="img-profile intro">
           <img src="assets/profile_picture.png" alt="" className="intro-img-profile" />

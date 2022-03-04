@@ -3869,34 +3869,6 @@ function isHostComponent(element) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/LockOutlined.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@mui/icons-material/LockOutlined.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
-
-var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
-}), 'LockOutlined');
-
-exports["default"] = _default;
-
-/***/ }),
-
 /***/ "./node_modules/@mui/icons-material/Mail.js":
 /*!**************************************************!*\
   !*** ./node_modules/@mui/icons-material/Mail.js ***!
@@ -6379,343 +6351,6 @@ function getCheckboxUtilityClass(slot) {
 }
 const checkboxClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiCheckbox', ['root', 'checked', 'disabled', 'indeterminate', 'colorPrimary', 'colorSecondary']);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (checkboxClasses);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/Container/Container.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/@mui/material/Container/Container.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/composeClasses/composeClasses.js");
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
-/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _containerClasses__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./containerClasses */ "./node_modules/@mui/material/Container/containerClasses.js");
-/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@mui/material/utils/capitalize.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-const _excluded = ["className", "component", "disableGutters", "fixed", "maxWidth"];
-
-
-
-
-
-
-
-
-
-
-const useUtilityClasses = ownerState => {
-  const {
-    classes,
-    fixed,
-    disableGutters,
-    maxWidth
-  } = ownerState;
-  const slots = {
-    root: ['root', maxWidth && `maxWidth${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(String(maxWidth))}`, fixed && 'fixed', disableGutters && 'disableGutters']
-  };
-  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_6__["default"])(slots, _containerClasses__WEBPACK_IMPORTED_MODULE_7__.getContainerUtilityClass, classes);
-};
-
-const ContainerRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])('div', {
-  name: 'MuiContainer',
-  slot: 'Root',
-  overridesResolver: (props, styles) => {
-    const {
-      ownerState
-    } = props;
-    return [styles.root, styles[`maxWidth${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(String(ownerState.maxWidth))}`], ownerState.fixed && styles.fixed, ownerState.disableGutters && styles.disableGutters];
-  }
-})(({
-  theme,
-  ownerState
-}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  width: '100%',
-  marginLeft: 'auto',
-  boxSizing: 'border-box',
-  marginRight: 'auto',
-  display: 'block'
-}, !ownerState.disableGutters && {
-  paddingLeft: theme.spacing(2),
-  paddingRight: theme.spacing(2),
-  [theme.breakpoints.up('sm')]: {
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3)
-  }
-}), ({
-  theme,
-  ownerState
-}) => ownerState.fixed && Object.keys(theme.breakpoints.values).reduce((acc, breakpoint) => {
-  const value = theme.breakpoints.values[breakpoint];
-
-  if (value !== 0) {
-    acc[theme.breakpoints.up(breakpoint)] = {
-      maxWidth: `${value}${theme.breakpoints.unit}`
-    };
-  }
-
-  return acc;
-}, {}), ({
-  theme,
-  ownerState
-}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, ownerState.maxWidth === 'xs' && {
-  [theme.breakpoints.up('xs')]: {
-    maxWidth: Math.max(theme.breakpoints.values.xs, 444)
-  }
-}, ownerState.maxWidth && ownerState.maxWidth !== 'xs' && {
-  [theme.breakpoints.up(ownerState.maxWidth)]: {
-    maxWidth: `${theme.breakpoints.values[ownerState.maxWidth]}${theme.breakpoints.unit}`
-  }
-}));
-const Container = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Container(inProps, ref) {
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__["default"])({
-    props: inProps,
-    name: 'MuiContainer'
-  });
-
-  const {
-    className,
-    component = 'div',
-    disableGutters = false,
-    fixed = false,
-    maxWidth = 'lg'
-  } = props,
-        other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(props, _excluded);
-
-  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
-    component,
-    disableGutters,
-    fixed,
-    maxWidth
-  });
-
-  const classes = useUtilityClasses(ownerState);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ContainerRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    as: component,
-    ownerState: ownerState,
-    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.root, className),
-    ref: ref
-  }, other));
-});
- true ? Container.propTypes
-/* remove-proptypes */
-= {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit the d.ts file and run "yarn proptypes"     |
-  // ----------------------------------------------------------------------
-
-  /**
-   * @ignore
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().node),
-
-  /**
-   * Override or extend the styles applied to the component.
-   */
-  classes: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().object),
-
-  /**
-   * @ignore
-   */
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string),
-
-  /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */
-  component: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().elementType),
-
-  /**
-   * If `true`, the left and right padding is removed.
-   * @default false
-   */
-  disableGutters: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().bool),
-
-  /**
-   * Set the max-width to match the min-width of the current breakpoint.
-   * This is useful if you'd prefer to design for a fixed set of sizes
-   * instead of trying to accommodate a fully fluid viewport.
-   * It's fluid by default.
-   * @default false
-   */
-  fixed: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().bool),
-
-  /**
-   * Determine the max-width of the container.
-   * The container width grows with the size of the screen.
-   * Set to `false` to disable `maxWidth`.
-   * @default 'lg'
-   */
-  maxWidth: prop_types__WEBPACK_IMPORTED_MODULE_10___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_10___default().oneOf(['xs', 'sm', 'md', 'lg', 'xl', false]), (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string)]),
-
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: prop_types__WEBPACK_IMPORTED_MODULE_10___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_10___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_10___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_10___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_10___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_10___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_10___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_10___default().object)])
-} : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Container);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/Container/containerClasses.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@mui/material/Container/containerClasses.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getContainerUtilityClass": () => (/* binding */ getContainerUtilityClass),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/generateUtilityClass/generateUtilityClass.js");
-/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/generateUtilityClasses/generateUtilityClasses.js");
-
-function getContainerUtilityClass(slot) {
-  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiContainer', slot);
-}
-const containerClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiContainer', ['root', 'disableGutters', 'fixed', 'maxWidthXs', 'maxWidthSm', 'maxWidthMd', 'maxWidthLg', 'maxWidthXl']);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (containerClasses);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/CssBaseline/CssBaseline.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@mui/material/CssBaseline/CssBaseline.js ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "html": () => (/* binding */ html),
-/* harmony export */   "body": () => (/* binding */ body),
-/* harmony export */   "styles": () => (/* binding */ styles),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
-/* harmony import */ var _GlobalStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../GlobalStyles */ "./node_modules/@mui/material/GlobalStyles/GlobalStyles.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-const html = (theme, enableColorScheme) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  WebkitFontSmoothing: 'antialiased',
-  // Antialiasing.
-  MozOsxFontSmoothing: 'grayscale',
-  // Antialiasing.
-  // Change from `box-sizing: content-box` so that `width`
-  // is not affected by `padding` or `border`.
-  boxSizing: 'border-box',
-  // Fix font resize problem in iOS
-  WebkitTextSizeAdjust: '100%'
-}, enableColorScheme && {
-  colorScheme: theme.palette.mode
-});
-const body = theme => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-  color: theme.palette.text.primary
-}, theme.typography.body1, {
-  backgroundColor: theme.palette.background.default,
-  '@media print': {
-    // Save printer ink.
-    backgroundColor: theme.palette.common.white
-  }
-});
-const styles = (theme, enableColorScheme = false) => {
-  var _theme$components, _theme$components$Mui;
-
-  let defaultStyles = {
-    html: html(theme, enableColorScheme),
-    '*, *::before, *::after': {
-      boxSizing: 'inherit'
-    },
-    'strong, b': {
-      fontWeight: theme.typography.fontWeightBold
-    },
-    body: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      margin: 0
-    }, body(theme), {
-      // Add support for document.body.requestFullScreen().
-      // Other elements, if background transparent, are not supported.
-      '&::backdrop': {
-        backgroundColor: theme.palette.background.default
-      }
-    })
-  };
-  const themeOverrides = (_theme$components = theme.components) == null ? void 0 : (_theme$components$Mui = _theme$components.MuiCssBaseline) == null ? void 0 : _theme$components$Mui.styleOverrides;
-
-  if (themeOverrides) {
-    defaultStyles = [defaultStyles, themeOverrides];
-  }
-
-  return defaultStyles;
-};
-/**
- * Kickstart an elegant, consistent, and simple baseline to build upon.
- */
-
-function CssBaseline(inProps) {
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_3__["default"])({
-    props: inProps,
-    name: 'MuiCssBaseline'
-  });
-  const {
-    children,
-    enableColorScheme = false
-  } = props;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_GlobalStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      styles: theme => styles(theme, enableColorScheme)
-    }), children]
-  });
-}
-
- true ? CssBaseline.propTypes
-/* remove-proptypes */
-= {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit the d.ts file and run "yarn proptypes"     |
-  // ----------------------------------------------------------------------
-
-  /**
-   * You can wrap a node.
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().node),
-
-  /**
-   * Enable `color-scheme` CSS property to use `theme.palette.mode`.
-   * For more details, check out https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme
-   * For browser support, check out https://caniuse.com/?search=color-scheme
-   * @default false
-   */
-  enableColorScheme: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().bool)
-} : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CssBaseline);
 
 /***/ }),
 
@@ -18352,122 +17987,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/@mui/private-theming/ThemeProvider/ThemeProvider.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@mui/private-theming/ThemeProvider/ThemeProvider.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/exactProp.js");
-/* harmony import */ var _useTheme_ThemeContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../useTheme/ThemeContext */ "./node_modules/@mui/private-theming/useTheme/ThemeContext.js");
-/* harmony import */ var _useTheme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../useTheme */ "./node_modules/@mui/private-theming/useTheme/useTheme.js");
-/* harmony import */ var _nested__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nested */ "./node_modules/@mui/private-theming/ThemeProvider/nested.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
- // To support composition of theme.
-
-
-
-function mergeOuterLocalTheme(outerTheme, localTheme) {
-  if (typeof localTheme === 'function') {
-    const mergedTheme = localTheme(outerTheme);
-
-    if (true) {
-      if (!mergedTheme) {
-        console.error(['MUI: You should return an object from your theme function, i.e.', '<ThemeProvider theme={() => ({})} />'].join('\n'));
-      }
-    }
-
-    return mergedTheme;
-  }
-
-  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, outerTheme, localTheme);
-}
-/**
- * This component takes a `theme` prop.
- * It makes the `theme` available down the React tree thanks to React context.
- * This component should preferably be used at **the root of your component tree**.
- */
-
-
-function ThemeProvider(props) {
-  const {
-    children,
-    theme: localTheme
-  } = props;
-  const outerTheme = (0,_useTheme__WEBPACK_IMPORTED_MODULE_3__["default"])();
-
-  if (true) {
-    if (outerTheme === null && typeof localTheme === 'function') {
-      console.error(['MUI: You are providing a theme function prop to the ThemeProvider component:', '<ThemeProvider theme={outerTheme => outerTheme} />', '', 'However, no outer theme is present.', 'Make sure a theme is already injected higher in the React tree ' + 'or provide a theme object.'].join('\n'));
-    }
-  }
-
-  const theme = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(() => {
-    const output = outerTheme === null ? localTheme : mergeOuterLocalTheme(outerTheme, localTheme);
-
-    if (output != null) {
-      output[_nested__WEBPACK_IMPORTED_MODULE_4__["default"]] = outerTheme !== null;
-    }
-
-    return output;
-  }, [localTheme, outerTheme]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_useTheme_ThemeContext__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
-    value: theme,
-    children: children
-  });
-}
-
- true ? ThemeProvider.propTypes = {
-  /**
-   * Your component tree.
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().node),
-
-  /**
-   * A theme object. You can provide a function to extend the outer theme.
-   */
-  theme: prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_6___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func)]).isRequired
-} : 0;
-
-if (true) {
-   true ? ThemeProvider.propTypes = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_7__["default"])(ThemeProvider.propTypes) : 0;
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ThemeProvider);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/private-theming/ThemeProvider/nested.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@mui/private-theming/ThemeProvider/nested.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const hasSymbol = typeof Symbol === 'function' && Symbol.for;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (hasSymbol ? Symbol.for('mui.nested') : '__THEME_NESTED__');
-
-/***/ }),
-
 /***/ "./node_modules/@mui/private-theming/useTheme/ThemeContext.js":
 /*!********************************************************************!*\
   !*** ./node_modules/@mui/private-theming/useTheme/ThemeContext.js ***!
@@ -18664,85 +18183,6 @@ function styled(tag, options) {
 
 
 
-
-/***/ }),
-
-/***/ "./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _mui_private_theming__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/private-theming */ "./node_modules/@mui/private-theming/ThemeProvider/ThemeProvider.js");
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/exactProp.js");
-/* harmony import */ var _mui_styled_engine__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/styled-engine */ "./node_modules/@emotion/react/dist/emotion-element-cbed451f.browser.esm.js");
-/* harmony import */ var _useTheme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../useTheme */ "./node_modules/@mui/system/esm/useTheme.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-
-function InnerThemeProvider(props) {
-  const theme = (0,_useTheme__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_styled_engine__WEBPACK_IMPORTED_MODULE_3__.T.Provider, {
-    value: typeof theme === 'object' ? theme : {},
-    children: props.children
-  });
-}
-
- true ? InnerThemeProvider.propTypes = {
-  /**
-   * Your component tree.
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().node)
-} : 0;
-/**
- * This component makes the `theme` available down the React tree.
- * It should preferably be used at **the root of your component tree**.
- */
-
-function ThemeProvider(props) {
-  const {
-    children,
-    theme: localTheme
-  } = props;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_private_theming__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    theme: localTheme,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(InnerThemeProvider, {
-      children: children
-    })
-  });
-}
-
- true ? ThemeProvider.propTypes = {
-  /**
-   * Your component tree.
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().node),
-
-  /**
-   * A theme object. You can provide a function to extend the outer theme.
-   */
-  theme: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_4___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func)]).isRequired
-} : 0;
-
-if (true) {
-   true ? ThemeProvider.propTypes = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_6__["default"])(ThemeProvider.propTypes) : 0;
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ThemeProvider);
 
 /***/ }),
 
@@ -24499,11 +23939,8 @@ function App(props) {
     exact: true,
     component: _components_account_Greetings__WEBPACK_IMPORTED_MODULE_12__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
-    path: "/login",
+    path: "/login/",
     component: _components_account_login_AuthForm__WEBPACK_IMPORTED_MODULE_10__.Login
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
-    path: "/signup",
-    component: _components_account_signup_Signup__WEBPACK_IMPORTED_MODULE_11__["default"]
   })));
 }
 
@@ -24652,16 +24089,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _signup_Signup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./signup/Signup */ "./client/components/account/signup/Signup.jsx");
+/* harmony import */ var _signup_CompleteProfile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./signup/CompleteProfile */ "./client/components/account/signup/CompleteProfile.jsx");
+
+
 
 
 function Greetings() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sections"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "welcome-container ",
+    className: "welcome-container",
     id: "welcome"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "welcome-left"
+    className: "welcome-top"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "welcome-title"
   }, "GREETINGS."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -24670,12 +24111,16 @@ function Greetings() {
     src: "https://i.pinimg.com/originals/5c/f4/d3/5cf4d3e04820af5be5fb0aed78291f35.gif",
     className: "intro-img-profile"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "welcome-right"
+    className: "welcome-bottom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "welcome-login"
-  }, " LOGIN"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "welcome-create"
-  }, "CREATE"))));
+    className: "welcome-bottom1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "login"
+  }, "LOGIN")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "welcome-bottom2"
+  }, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "create"
+  }, "CREATE ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_signup_Signup__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Greetings);
@@ -24840,6 +24285,35 @@ const Login = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapLogin, map
 
 /***/ }),
 
+/***/ "./client/components/account/signup/CompleteProfile.jsx":
+/*!**************************************************************!*\
+  !*** ./client/components/account/signup/CompleteProfile.jsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../store */ "./client/store/index.js");
+
+
+
+
+function CompleteProfile() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "intro",
+    id: "createProfile"
+  }, ' ');
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompleteProfile);
+
+/***/ }),
+
 /***/ "./client/components/account/signup/Signup.jsx":
 /*!*****************************************************!*\
   !*** ./client/components/account/signup/Signup.jsx ***!
@@ -24854,27 +24328,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../store */ "./client/store/index.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CssBaseline/CssBaseline.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Avatar/Avatar.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/FormControlLabel/FormControlLabel.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Checkbox/Checkbox.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Link/Link.js");
-/* harmony import */ var _mui_icons_material_LockOutlined__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/icons-material/LockOutlined */ "./node_modules/@mui/icons-material/LockOutlined.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/createTheme.js");
-/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Avatar/Avatar.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/FormControlLabel/FormControlLabel.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Checkbox/Checkbox.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
 
 
 
 
 
-
-const theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 const SignUp = props => {
   const {
@@ -24882,127 +24348,136 @@ const SignUp = props => {
     handleSubmit,
     error
   } = props;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    theme: theme
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    component: "main",
-    maxWidth: "xs"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    sx: {
-      marginTop: 8,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    sx: {
-      m: 1,
-      bgcolor: 'secondary.main'
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_LockOutlined__WEBPACK_IMPORTED_MODULE_9__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    component: "h1",
-    variant: "h5"
-  }, "Sign up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    component: "form",
-    noValidate: true,
-    onSubmit: handleSubmit,
-    name: name,
-    sx: {
-      mt: 3
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    container: true,
-    spacing: 2
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    item: true,
-    xs: 12,
-    sm: 12
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    margin: "normal",
-    required: true,
-    fullWidth: true,
-    id: "username",
-    label: "username",
-    name: "username",
-    type: "text",
-    autoComplete: "username",
-    autoFocus: true
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    item: true,
-    xs: 12,
-    sm: 6
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    autoComplete: "given-name",
-    required: true,
-    fullWidth: true,
-    name: "firstName",
-    id: "firstName",
-    label: "First Name",
-    type: "text",
-    autoFocus: true
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    item: true,
-    xs: 12,
-    sm: 6
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    required: true,
-    fullWidth: true,
-    id: "lastName",
-    label: "Last Name",
-    name: "lastName",
-    type: "text",
-    autoComplete: "family-name"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    item: true,
-    xs: 12,
-    sm: 12
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    required: true,
-    fullWidth: true,
-    id: "email",
-    label: "Email Address",
-    name: "email",
-    type: "text",
-    autoComplete: "email"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    item: true,
-    xs: 12,
-    item: true,
-    sm: 12
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    required: true,
-    fullWidth: true,
-    name: "password",
-    label: "Password",
-    type: "password",
-    id: "password",
-    autoComplete: "new-password"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    item: true,
-    xs: 12
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-      value: "allowExtraEmails",
-      color: "primary"
-    }),
-    label: "I want to receive inspiration, marketing promotions and updates via email."
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
-    type: "submit",
-    fullWidth: true,
-    variant: "contained",
-    sx: {
-      mt: 3,
-      mb: 2
-    }
-  }, "Sign Up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    container: true,
-    justifyContent: "flex-end"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    item: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-    href: "#",
-    variant: "body2"
-  }, "Already have an account? Sign in")))))));
+  return (
+    /*#__PURE__*/
+    // <div className="sections">
+    react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "intro",
+      id: "create"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      sx: {
+        marginTop: 8,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      sx: {
+        m: 1,
+        bgcolor: 'secondary.main'
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      src: "https://i.pinimg.com/originals/33/ff/7c/33ff7c9c228c36dbc291964663e0f4a9.gif",
+      className: "intro-img-profile"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      component: "h1",
+      variant: "h5"
+    }, "Sign up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      component: "form",
+      noValidate: true,
+      onSubmit: handleSubmit,
+      name: name,
+      sx: {
+        mt: 3
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      container: true,
+      spacing: 2
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      item: true,
+      xs: 12,
+      sm: 12
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      margin: "normal",
+      required: true,
+      fullWidth: true,
+      id: "username",
+      label: "username",
+      name: "username",
+      type: "text",
+      autoComplete: "username",
+      autoFocus: true
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      item: true,
+      xs: 12,
+      sm: 6
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      autoComplete: "given-name",
+      required: true,
+      fullWidth: true,
+      name: "firstName",
+      id: "firstName",
+      label: "First Name",
+      type: "text",
+      autoFocus: true
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      item: true,
+      xs: 12,
+      sm: 6
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      required: true,
+      fullWidth: true,
+      id: "lastName",
+      label: "Last Name",
+      name: "lastName",
+      type: "text",
+      autoComplete: "family-name"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      item: true,
+      xs: 12,
+      sm: 12
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      required: true,
+      fullWidth: true,
+      id: "email",
+      label: "Email Address",
+      name: "email",
+      type: "text",
+      autoComplete: "email"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      item: true,
+      xs: 12,
+      item: true,
+      sm: 12
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      required: true,
+      fullWidth: true,
+      name: "password",
+      label: "Password",
+      type: "password",
+      id: "password",
+      autoComplete: "new-password"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      item: true,
+      xs: 12
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        value: "allowExtraEmails",
+        color: "secondary"
+      }),
+      label: "I want to receive inspiration, marketing promotions and updates via email."
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      type: "submit",
+      fullWidth: true,
+      variant: "contained",
+      sx: {
+        mt: 3,
+        mb: 2
+      }
+    }, "Complete Profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      container: true,
+      justifyContent: "flex-end"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      item: true
+    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+      href: "#createProfile"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      src: "assets/down.png",
+      alt: "",
+      className: "intro-img-down"
+    }))) // </div>
+
+  );
 };
 
 const mapSignup = state => {
@@ -25117,7 +24592,7 @@ function Intro() {
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "intro",
-    id: "intro"
+    id: "/intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "intro-left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -25177,19 +24652,19 @@ function Menu({
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     onClick: () => setActive(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#intro"
+    href: "intro"
   }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     onClick: () => setActive(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#portfolio"
+    href: "portfolio"
   }, "Portfolio")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     onClick: () => setActive(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#work"
+    href: "work"
   }, "Works")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     onClick: () => setActive(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#contact"
+    href: "contact"
   }, "Contact"))));
 }
 
