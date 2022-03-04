@@ -479,7 +479,8 @@ a > .intro-img-down {
   justify-content: center;
 }
 .work-imgContainer > img {
-  width: 25px;
+  width: 4vw;
+  padding: 2vw;
 }
 
 .work-right > img {
