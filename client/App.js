@@ -6,8 +6,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Work from './components/works/Work';
 import Contacts from './components/contact/Contact';
 import Menu from './components/navbar/Menu';
-import Scroll from 'react-scroll';
-const ScrollLink = Scroll.ScrollLink;
+import Routes from './Routes';
 
 function App() {
   //active toggle with useState hook
@@ -23,6 +22,7 @@ function App() {
         <Work />
         <Contacts />
       </div>
+      {/* <Routes /> */}
     </div>
   );
 }

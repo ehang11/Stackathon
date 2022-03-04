@@ -3,6 +3,35 @@
   margin: 0;
   overflow-x: hidden;
 }
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .work-arrow {
+    display: none;
+  }
+  .work-imgContainer {
+    width: 20px;
+    height: 20px;
+  }
+  .work-title {
+    font-size: 13px;
+  }
+
+  .work-container-item {
+    width: 80%;
+    height: 150px;
+    margin: 15px 0;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
 :root {
   /*---------------------------------------------Themes--------------------------------------------- */
   /* ----Reference: https://visme.co/blog/website-color-schemes---- */
@@ -19,6 +48,7 @@
   --main-accent1: #fc4445;
   --main-accent2: whitesmoke;
   --main-accent3: rgb(142, 27, 27);
+  --main-accent4: #cafafe;
 
   /* @@@Theme 2: Colorful-Balanced@@@ */
   --theme2-primary: #41b3a3;
@@ -379,51 +409,59 @@ a > .intro-img-down {
   justify-content: center;
   position: relative;
 }
-
-.work > .work-arrow {
-  height: 50px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.work-arrow > .work-arrow-left {
-  left: 100px;
-  transform: rotateY(180deg);
-}
-.work-arrow > .work-arrow-right {
-  right: 100px;
-}
-.work-slider {
-  height: 350px;
-  display: flex;
-  position: absolute;
-  left: 0;
-  transition: all 1s ease-out;
-}
-.work > .work-container {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.work-container > .work-container-item {
-  width: 700px;
-  height: 100%;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.work-left {
+.work-container-item > .work-left {
   flex: 4;
   height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.work-container-item > .work-right {
+  flex: 8;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.work-arrow {
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
+}
 
-.work-left > .work-leftContainer {
+.work-arrow.work-left {
+  left: 100px;
+  transform: rotateY(180deg);
+}
+.work-arrow.work-right {
+  right: 100px;
+}
+
+.work-slider {
+  height: 46vh;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease-out;
+}
+.work-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-container-item {
+  width: 50vw;
+  height: 100%;
+  background-color: var(--main-accent4);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-leftContainer {
   width: 90%;
   height: 70%;
   display: flex;
@@ -431,7 +469,7 @@ a > .intro-img-down {
   justify-content: space-between;
 }
 
-.work-leftContainer > .work-imgContainer {
+.work-left > .work-imgContainer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -443,19 +481,12 @@ a > .intro-img-down {
 .work-imgContainer > img {
   width: 25px;
 }
-.work-container-item > .work-right {
-  flex: 8;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+
 .work-right > img {
   width: 400px;
   transform: rotate(-10deg);
 }
-.work-leftContainer > h2 {
+.work-title {
   font-size: 20px;
 }
 .work-leftContainer > p {

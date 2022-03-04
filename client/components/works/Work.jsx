@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
 function Work() {
+  //used to decide which slide is set to, initial at 0
   const [slide, setSlider] = useState(0);
   const data = [
     {
       id: '1',
-      icon: './assets/mobile.png',
-      title: 'Web Design',
+      icon: './assets/fullstack_icons/react.png',
+      title: 'React',
       desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
       img: 'https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930',
     },
@@ -25,8 +26,8 @@ function Work() {
       img: 'https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg',
     },
   ];
-  const handleClick = (evt) => {
-    evt === 'left' ? setSlider(slide > 0 ? slide - 1 : 2) : setSlider(slide < data.length - 1 ? slide + 1 : 0);
+  const handleClick = (direction) => {
+    direction === 'left' ? setSlider(slide > 0 ? slide - 1 : 2) : setSlider(slide < data.length - 1 ? slide + 1 : 0);
   };
   return (
     <div className="work" id="work">
@@ -39,7 +40,7 @@ function Work() {
                   <div className="work-imgContainer">
                     <img src={d.icon} alt="" />
                   </div>
-                  <h2>{d.title}</h2>
+                  <h2 className="work-title">{d.title}</h2>
                   <p>{d.desc}</p>
                   <span>Projects</span>
                 </div>
@@ -54,10 +55,10 @@ function Work() {
           </div>
         ))}
       </div>
-      <div className="work-arrow">
-        <img src="assets/arrow.png" className="work-arrow-left" alt="" onClick={() => handleClick('left')} />
-        <img src="assets/arrow.png" className="work-arrow right" alt="" onClick={() => handleClick()} />
-      </div>
+
+      <img src="assets/arrow.png" className="work-arrow work-left" alt="" onClick={() => handleClick('left')} />
+
+      <img src="assets/arrow.png" className="work-arrow work-right" alt="" onClick={() => handleClick()} />
     </div>
   );
 }

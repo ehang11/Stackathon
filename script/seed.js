@@ -17,24 +17,31 @@ async function seed() {
   const users = await Promise.all([
     User.create({
       username: 'cody',
-      email: 'cody@gmail.com',
       password: '123',
+      firstName: 'Cody',
+      lastName: 'Smith',
+      email: 'cody@gmail.com',
+      phoneNumber: 222 - 224 - 4242,
     }),
     User.create({
       username: 'murphy',
-      email: 'murphy@gmail.com',
       password: '123',
+      firstName: 'Murphy',
+      lastName: 'Thompson',
+      email: 'murphy@gmail.com',
+      phoneNumber: 222 - 224 - 4242,
     }),
     User.create({
       username: 'eric',
-      email: 'ehang@gmail.com',
       password: 'nice',
+      email: 'ehang@gmail.com',
+      firstName: 'Eric',
+      lastName: 'Jackson',
     }),
   ]);
 
   console.log(`seeded ${users.length} users`);
 
-  // console.log(`seeded ${itemsInCartUser1.length} products in cart`)
   console.log(`seeded successfully`);
   return {
     users: {
