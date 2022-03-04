@@ -24445,15 +24445,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_navbar_Nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/navbar/Nav */ "./client/components/navbar/Nav.jsx");
-/* harmony import */ var _components_intro_Intro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/intro/Intro */ "./client/components/intro/Intro.jsx");
-/* harmony import */ var _components_portfolio_Portfolio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/portfolio/Portfolio */ "./client/components/portfolio/Portfolio.jsx");
-/* harmony import */ var _components_works_Work__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/works/Work */ "./client/components/works/Work.jsx");
-/* harmony import */ var _components_contact_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/contact/Contact */ "./client/components/contact/Contact.jsx");
-/* harmony import */ var _components_navbar_Menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/navbar/Menu */ "./client/components/navbar/Menu.jsx");
-/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Routes */ "./client/Routes.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./store */ "./client/store/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_navbar_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/navbar/Nav */ "./client/components/navbar/Nav.jsx");
+/* harmony import */ var _components_intro_Intro__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/intro/Intro */ "./client/components/intro/Intro.jsx");
+/* harmony import */ var _components_portfolio_Portfolio__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/portfolio/Portfolio */ "./client/components/portfolio/Portfolio.jsx");
+/* harmony import */ var _components_works_Work__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/works/Work */ "./client/components/works/Work.jsx");
+/* harmony import */ var _components_contact_Contact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/contact/Contact */ "./client/components/contact/Contact.jsx");
+/* harmony import */ var _components_navbar_Menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/navbar/Menu */ "./client/components/navbar/Menu.jsx");
+/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Routes */ "./client/Routes.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./store */ "./client/store/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _components_account_login_AuthForm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/account/login/AuthForm */ "./client/components/account/login/AuthForm.js");
 /* harmony import */ var _components_account_signup_Signup__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/account/signup/Signup */ "./client/components/account/signup/Signup.jsx");
 
@@ -24470,20 +24471,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function App(props) {
-  //active toggle with useState hook
+  const state = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(state => state);
+  const {
+    auth
+  } = state;
+  const isLoggedIn = !!auth.id; // const dispatch = useDispatch();
+
+  console.log('log auth.id--->', auth.id); //active toggle with useState hook
+
   const [isActive, setActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "app"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_navbar_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_navbar_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
     isActive: isActive,
     setActive: setActive
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_navbar_Menu__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_navbar_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
     isActive: isActive,
     setActive: setActive
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Routes__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }), isLoggedIn ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sections"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_intro_Intro__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_portfolio_Portfolio__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_works_Work__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_contact_Contact__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_intro_Intro__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_portfolio_Portfolio__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_works_Work__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_contact_Contact__WEBPACK_IMPORTED_MODULE_6__["default"], null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
+    path: "/",
+    exact: true,
+    component: _components_account_login_AuthForm__WEBPACK_IMPORTED_MODULE_10__.Login
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
+    path: "/login",
+    component: _components_account_login_AuthForm__WEBPACK_IMPORTED_MODULE_10__.Login
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Route, {
+    path: "/signup",
+    component: _components_account_signup_Signup__WEBPACK_IMPORTED_MODULE_11__["default"]
+  })));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -24529,7 +24548,12 @@ class Routes extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     const {
       isLoggedIn
     } = this.props;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, isLoggedIn ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+      path: "/home",
+      component: _components_Home__WEBPACK_IMPORTED_MODULE_4__["default"]
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Redirect, {
+      to: "/home"
+    })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
       path: "/",
       exact: true,
       component: _components_account_login_AuthForm__WEBPACK_IMPORTED_MODULE_2__.Login

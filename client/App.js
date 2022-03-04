@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Nav from './components/navbar/Nav';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
@@ -15,6 +15,12 @@ import { Login } from './components/account/login/AuthForm';
 import SignUp from './components/account/signup/Signup';
 
 function App(props) {
+  const state = useSelector((state) => state);
+  const { auth } = state;
+  const isLoggedIn = !!auth.id;
+  // const dispatch = useDispatch();
+  console.log('log auth.id--->', auth.id);
+
   //active toggle with useState hook
   const [isActive, setActive] = useState(false);
 
@@ -22,13 +28,21 @@ function App(props) {
     <div className="app">
       <Nav isActive={isActive} setActive={setActive} />
       <Menu isActive={isActive} setActive={setActive} />
-      <Routes />
-      <div className="sections">
-        <Intro />
-        <Portfolio />
-        <Work />
-        <Contacts />
-      </div>
+      {/* <Routes /> */}
+      {isLoggedIn ? (
+        <div className="sections">
+          <Intro />
+          <Portfolio />
+          <Work />
+          <Contacts />
+        </div>
+      ) : (
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={SignUp} />
+        </Switch>
+      )}
     </div>
   );
 }
