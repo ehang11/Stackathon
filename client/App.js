@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Login } from './components/account/login/AuthForm';
 import SignUp from './components/account/signup/Signup';
+import Greetings from './components/account/Greetings';
 
 function App(props) {
   const state = useSelector((state) => state);
@@ -38,7 +39,7 @@ function App(props) {
         </div>
       ) : (
         <Switch>
-          <Route path="/" exact component={Login} />
+          <Route path="/" exact component={Greetings} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
         </Switch>

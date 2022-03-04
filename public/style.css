@@ -80,7 +80,7 @@
 .sections {
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: lightsalmon;
+
   position: relative;
   top: 70px;
   scroll-snap-type: y mandatory;
@@ -241,6 +241,136 @@
   transform: rotate(-45deg);
 }
 /* -----------------------------_CHILD OF SECTIONS_----------------------------- */
+/* -----------------------------WELCOME CSS----------------------------- */
+.welcome-container {
+  background-color: white;
+  display: center;
+  margin: 30px;
+  background-color: white;
+}
+.welcome-left {
+  width: 95%;
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+.img-profile.welcome {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  transition: all 5s ease;
+}
+.welcome-title {
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  z-index: 2;
+  font-size: 40px;
+  height: calc(100vh - 90vh);
+  padding-right: 10px;
+  transition: all 4s ease;
+  color: black;
+}
+
+.welcome-right {
+  /* background-color: yellow; */
+  overflow: hidden;
+  width: 95%;
+  justify-content: center;
+  display: list-item;
+  color: var(--main-dark);
+}
+
+.welcome-login {
+  display: block;
+
+  height: 50px;
+  padding: 5px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: line-through;
+  justify-content: center;
+  transform-origin: center;
+  transition: width 1s, height 2s, background-color 2s, transform 2s;
+}
+.welcome-create {
+  display: block;
+
+  height: 50px;
+  padding: 5px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: line-through;
+  justify-content: center;
+  transform-origin: center;
+  transition: width 1s, height 2s, background-color 2s, transform 2s;
+}
+
+.welcome-create:hover {
+  background-color: var(--main-secondary);
+  color: white;
+  width: 100%;
+  height: 150px;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.welcome-login:hover {
+  background-color: var(--main-dark);
+  color: white;
+  width: 100%;
+  height: 150px;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 25px;
+  text-decoration: none;
+  justify-content: center;
+}
+/* -----------------------------LOGIN CSS----------------------------- */
+.img-profile.login {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  transition: all 5s ease;
+}
+
+.welcome-back {
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  z-index: 2;
+  font-size: 40px;
+  height: calc(100vh - 88vh);
+  transition: all 4s ease;
+  color: black;
+}
+.img-profile.login:hover {
+  background-color: #fc4445;
+
+  border: none;
+}
+/* .welcome-back:hover {
+} */
+/* ----------------------------_LOGIN CSS_---------------------------- */
 /* -----------------------------Intro CSS----------------------------- */
 .intro {
   background-color: white;
@@ -252,7 +382,7 @@
   /* background-color: yellow; */
   overflow: hidden;
 }
-.img-profile {
+.img-profile.intro {
   width: 100vh;
   height: 100vh;
   background-color: var(--main-accent1);
@@ -262,6 +392,7 @@
   justify-content: center;
   float: right;
 }
+
 .img-profile > img {
   height: 90%;
   /* optional: image filters available via https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness() */

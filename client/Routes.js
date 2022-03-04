@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Login } from './components/account/login/AuthForm';
 import SignUp from './components/account/signup/Signup';
-
+import Greetings from './components/account/Greetings';
 import Home from './components/Home';
 import { me } from './store';
 
@@ -27,7 +27,7 @@ class Routes extends Component {
           </Switch>
         ) : (
           <Switch>
-            <Route path="/" exact component={Login} />
+            <Route path="/" exact component={Greetings} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
           </Switch>
