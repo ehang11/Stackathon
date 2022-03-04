@@ -25227,7 +25227,7 @@ function Nav({
     className: "nav-left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "#Intro",
-    className: "logo"
+    className: isActive ? 'logo-active' : 'logo'
   }, "KARD."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "itemContainer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_1__["default"], {

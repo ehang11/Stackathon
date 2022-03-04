@@ -125,7 +125,16 @@
   font-size: 40px;
   font-weight: 700;
   text-decoration: none;
+
   color: inherit;
+  margin-right: 40px;
+}
+.nav-left > .logo-active {
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: var(--main-light);
   margin-right: 40px;
 }
 .itemContainer {

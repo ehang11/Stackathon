@@ -6,7 +6,7 @@ function Nav({ isActive, setActive }) {
     <div className={isActive ? 'nav-active' : 'nav'}>
       <div className={isActive ? 'wrapper-active' : 'wrapper'}>
         <div className="nav-left">
-          <a href="#Intro" className="logo">
+          <a href="#Intro" className={isActive ? 'logo-active' : 'logo'}>
             KARD.
           </a>
           <div className="itemContainer">
