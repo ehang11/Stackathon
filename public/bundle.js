@@ -24469,13 +24469,7 @@ const SignUp = props => {
       justifyContent: "flex-end"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
       item: true
-    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-      href: "#createProfile"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "assets/down.png",
-      alt: "",
-      className: "intro-img-down"
-    }))) // </div>
+    }))))) // </div>
 
   );
 };
