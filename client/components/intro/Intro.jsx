@@ -18,11 +18,12 @@ function Intro() {
     primaryRole: user.primaryRole || '',
     subRole1: user.subRole1 || user.primaryRole,
     subRole2: user.subRole2 || user.primaryRole,
-    profilePicture_URL: user.profilePicture_URL || '',
+    profilePicture_URL: user.profilePicture_URL,
     linkedIn_URL: user.linkedIn_URL || '',
     gitHub_URL: user.gitHub_URL || '',
   });
   const dispatch = useDispatch();
+  console.log('pfp link->', user.profilePicture_URL);
 
   useEffect(() => {
     // console.log('view ityped-textRef----->', textRef);
@@ -52,7 +53,7 @@ function Intro() {
     <div className="intro" id="/intro">
       <div className="intro-left">
         <div className="img-profile intro">
-          <img src="assets/profile_picture.png" alt="" className="intro-img-profile" />
+          <img src={user.profilePicture_URL} alt="" className="img-pfp" />
         </div>
       </div>
       <div className="intro-right">

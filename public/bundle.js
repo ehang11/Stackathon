@@ -24446,7 +24446,7 @@ function Greetings() {
     className: "img-profile welcome"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://i.pinimg.com/originals/5c/f4/d3/5cf4d3e04820af5be5fb0aed78291f35.gif",
-    className: "intro-img-profile"
+    className: "img-profile-welcome"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "welcome-bottom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -24516,7 +24516,7 @@ const AuthForm = props => {
     className: "img-profile login"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "https://i.pinimg.com/originals/5c/f4/d3/5cf4d3e04820af5be5fb0aed78291f35.gif",
-    className: "intro-img-profile"
+    className: "img-profile-welcome"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "intro-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -24924,11 +24924,12 @@ function Intro() {
     primaryRole: user.primaryRole || '',
     subRole1: user.subRole1 || user.primaryRole,
     subRole2: user.subRole2 || user.primaryRole,
-    profilePicture_URL: user.profilePicture_URL || '',
+    profilePicture_URL: user.profilePicture_URL,
     linkedIn_URL: user.linkedIn_URL || '',
     gitHub_URL: user.gitHub_URL || ''
   });
   const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  console.log('pfp link->', user.profilePicture_URL);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     // console.log('view ityped-textRef----->', textRef);
     (0,ityped__WEBPACK_IMPORTED_MODULE_2__.init)(textRef.current, {
@@ -24966,9 +24967,9 @@ function Intro() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "img-profile intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "assets/profile_picture.png",
+    src: user.profilePicture_URL,
     alt: "",
-    className: "intro-img-profile"
+    className: "img-pfp"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "intro-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -25050,7 +25051,7 @@ function Menu({
       setActive(false);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "welcome"
+    href: "#welcome"
   }, "Logout")) : ''));
 }
 

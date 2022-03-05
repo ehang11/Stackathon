@@ -10,7 +10,7 @@ function Greetings() {
           <div className="img-profile welcome">
             <img
               src="https://i.pinimg.com/originals/5c/f4/d3/5cf4d3e04820af5be5fb0aed78291f35.gif"
-              className="intro-img-profile"
+              className="img-profile-welcome"
             />
           </div>
         </div>

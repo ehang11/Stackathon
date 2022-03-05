@@ -449,10 +449,13 @@ a {
   float: right;
 }
 
-.img-profile > img {
+.img-profile > .img-profile-welcome {
   height: 90%;
   /* optional: image filters available via https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness() */
-  filter: brightness(1.25);
+  filter: brightness(1.15);
+}
+.img-profile.intro > .img-pfp {
+  height: 90%;
 }
 .intro > .intro-right {
   flex: 0.5;
