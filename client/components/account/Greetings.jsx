@@ -1,6 +1,6 @@
 import React from 'react';
-import Signup from './signup/Signup';
-import CompleteProfile from './signup/CompleteProfile';
+import SignUp from './SignUp';
+
 import { Link } from 'react-router-dom';
 function Greetings() {
   return (

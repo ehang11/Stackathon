@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { connect } from 'react-redux';
-import { authenticate } from '../../../store';
+import { authenticate } from '../../store';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   Avatar,

@@ -12,7 +12,7 @@ import { me } from './store';
 import { connect } from 'react-redux';
 import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Login } from './components/account/login/AuthForm';
-import SignUp from './components/account/signup/Signup';
+import SignUp from './components/account/SignUp';
 import Greetings from './components/account/Greetings';
 
 function App(props) {
