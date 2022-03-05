@@ -30,9 +30,9 @@ Test Accounts (seed.js):
    password: '123',
 
 ## Backlogs
--Theme Component for color customization
--Mobile styling optimization
--LinkedIn Intergration
--Add/Remove Projects + Works
--Dynamic Links containing unique usernames
--Bug fixes
+* **Theme Component for color customization** *
+* **Mobile styling optimization** *
+* **LinkedIn Intergration** *
+* **Add/Remove Projects + Works** *
+* **Dynamic Links containing unique usernames** *
+* **Bug fixes** *
