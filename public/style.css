@@ -443,6 +443,22 @@ a {
 } */
 /* ----------------------------_LOGIN CSS_---------------------------- */
 /* -----------------------------SIGNUP CSS----------------------------- */
+.signup-container {
+  background-color: white;
+  display: flex;
+  padding-top: 30px;
+}
+.signup-container > .signup-left {
+  flex: 0;
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+.signup-container > .signup-right {
+  flex: 1;
+  /* background-color: yellow; */
+  overflow: hidden;
+  position: relative;
+}
 /* ----------------------------_SIGNUP CSS_---------------------------- */
 /* -----------------------------Intro CSS----------------------------- */
 .intro {
