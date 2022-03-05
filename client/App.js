@@ -26,7 +26,7 @@ function App(props) {
   const [isActive, setActive] = useState(false);
 
   return (
-    <div className="app" id="home">
+    <div className="app">
       <Nav isActive={isActive} setActive={setActive} />
       <Menu isActive={isActive} setActive={setActive} />
       {/* <Routes /> */}

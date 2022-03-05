@@ -23968,8 +23968,7 @@ function App(props) {
 
   const [isActive, setActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "app",
-    id: "home"
+    className: "app"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_navbar_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
     isActive: isActive,
     setActive: setActive
@@ -24031,9 +24030,7 @@ class Routes extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       isLoggedIn
     } = this.props;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, isLoggedIn ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
-      path: "/welcome"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Redirect, {
-      to: "/"
+      path: "/home"
     })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
       path: "/welcome"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
