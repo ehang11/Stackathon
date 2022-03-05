@@ -30,7 +30,7 @@ function Menu({ isActive, setActive }) {
               setActive(false);
             }}
           >
-            <a href="#welcome">Logout</a>
+            <a href="welcome">Logout</a>
           </li>
         ) : (
           ''

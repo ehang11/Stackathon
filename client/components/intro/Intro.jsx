@@ -48,7 +48,7 @@ function Intro() {
   //   notify();
   // };
   return (
-    <div className="intro" id="/intro">
+    <div className="intro" id="intro">
       <div className="intro-left">
         <div className="img-profile intro">
           <img src={user.profilePicture_URL} alt="" className="img-pfp" />
@@ -65,7 +65,7 @@ function Intro() {
             Developer
           </h3>
         </div>
-        <a href="#portfolio">
+        <a href="portfolio">
           <img src="assets/down.png" alt="" className="intro-img-down" />
         </a>
       </div>

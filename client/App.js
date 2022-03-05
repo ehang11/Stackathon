@@ -26,7 +26,7 @@ function App(props) {
   const [isActive, setActive] = useState(false);
 
   return (
-    <div className="app">
+    <div className="app" id="home">
       <Nav isActive={isActive} setActive={setActive} />
       <Menu isActive={isActive} setActive={setActive} />
       {/* <Routes /> */}
@@ -38,12 +38,20 @@ function App(props) {
           <Contacts />
         </div>
       ) : (
-        <Switch>
-          <Route path="/" exact component={Greetings} />
-          <Route path="/login/" component={Login} />
-          {/* <Route path="/create" component={SignUp} /> */}
-        </Switch>
+        <div className="app">
+          <Routes />
+          <div className="sections">
+            <Greetings />
+
+            <SignUp />
+          </div>
+        </div>
       )}
+      {/* <Switch>
+           <Route path="/welcome" exact component={Greetings} />
+          <Route path="/login" component={Login} />
+
+        </Switch> */}
     </div>
   );
 }

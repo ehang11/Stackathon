@@ -22,12 +22,12 @@ const SignUp = (props) => {
 
   return (
     <div id="create">
-      <Container component="main" maxWidth="s">
+      <Container component="main" maxWidth="m">
         <CssBaseline />
 
         <Box
           sx={{
-            display: 'list-item',
+            display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}
@@ -41,7 +41,13 @@ const SignUp = (props) => {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} name={name} sx={{ mt: 3 }}>
+          <Box
+            // component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            name={name}
+            sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+          >
             <Grid container spacing={12}>
               <Grid item xs={12} sm={12}>
                 <TextField
@@ -72,7 +78,7 @@ const SignUp = (props) => {
               <Grid item xs={12} sm={12}>
                 <TextField required fullWidth id="email" label="Email Address" name="email" type="text" autoComplete="email" />
               </Grid>
-              <Grid item xs={6} item sm={6}>
+              <Grid item xs={6} sm={6}>
                 <TextField required name="password" label="Password" type="password" id="password" autoComplete="new-password" />
               </Grid>
               <Grid item xs={6}>

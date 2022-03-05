@@ -98,6 +98,21 @@ a {
   display: none; /* hide scroll: for Chrome, Safari, and Opera */
 }
 
+.greeting-sections {
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  position: relative;
+  top: 80px;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* hide scroll: for Firefox */
+  scroll-behavior: smooth;
+}
+
+.sections::-webkit-scrollbar {
+  display: none; /* hide scroll: for Chrome, Safari, and Opera */
+}
+
 /* -----------------------------CHILD OF SECTIONS----------------------------- */
 .sections > * {
   width: 100vw;
@@ -427,6 +442,8 @@ a {
 /* .welcome-back:hover {
 } */
 /* ----------------------------_LOGIN CSS_---------------------------- */
+/* -----------------------------SIGNUP CSS----------------------------- */
+/* ----------------------------_SIGNUP CSS_---------------------------- */
 /* -----------------------------Intro CSS----------------------------- */
 .intro {
   background-color: white;
