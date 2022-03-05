@@ -24130,6 +24130,8 @@ const SignUp = props => {
   }, "Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material_OutlinedInput__WEBPACK_IMPORTED_MODULE_9__["default"], {
     variant: "standard",
     fullWidth: true,
+    margin: "normal",
+    required: true,
     id: "outlined-adornment-password",
     type: values.showPassword ? 'text' : 'password',
     value: values.password,
@@ -24142,7 +24144,8 @@ const SignUp = props => {
       onMouseDown: handleMouseDownPassword,
       edge: "end"
     }, values.showPassword ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_VisibilityOff__WEBPACK_IMPORTED_MODULE_12__["default"], null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_Visibility__WEBPACK_IMPORTED_MODULE_13__["default"], null))),
-    label: "Password"
+    label: "Password",
+    name: "password"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
     margin: "normal",
     required: true,
