@@ -15,12 +15,15 @@ const User = db.define('user', {
   },
   password: {
     type: STRING,
+    allowNull: false,
   },
   firstName: {
     type: STRING,
+    allowNull: false,
   },
   lastName: {
     type: STRING,
+    allowNull: false,
   },
   email: {
     type: STRING,
@@ -32,6 +35,7 @@ const User = db.define('user', {
   },
   phoneNumber: {
     type: STRING,
+    allowNull: false,
   },
   primaryRole: {
     type: STRING,
