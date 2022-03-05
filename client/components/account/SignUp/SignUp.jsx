@@ -1,6 +1,7 @@
-import * as React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { connect } from 'react-redux';
 import { authenticate } from '../../../store';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   Avatar,
   Button,
@@ -17,12 +18,23 @@ import {
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import IconButton from '@mui/material/IconButton';
+
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+
+import FormControl from '@mui/material/FormControl';
+
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
 const theme = createTheme();
 
 const SignUp = (props) => {
   const { name, handleSubmit, error } = props;
   const { auth: user } = useSelector((state) => state);
-  const [userState, setUserState] = useState({
+  const [values, setValues] = useState({
     username: user.username || '',
     firstName: user.firstName || '',
     lastName: user.lastName || '',
@@ -32,7 +44,7 @@ const SignUp = (props) => {
     primaryRole: user.primaryRole || '',
     subRole1: user.subRole1 || user.primaryRole,
     subRole2: user.subRole2 || user.primaryRole,
-    profilePicture_URL: user.profilePicture_URL,
+    profilePicture_URL: user.profilePicture_URL || '',
     linkedIn_URL: user.linkedIn_URL || '',
     gitHub_URL: user.gitHub_URL || '',
     password: '',
@@ -83,18 +95,18 @@ const SignUp = (props) => {
                 margin="normal"
                 required
                 fullWidth
-                id="username"
+                id="_username"
                 label="Username"
                 name="username"
                 type="text"
                 variant="standard"
               />
-              <TextField required fullWidth name="firstName" id="firstName" label="First Name" type="text" variant="standard" />
-              <TextField required fullWidth id="lastName" label="Last Name" name="lastName" type="text" variant="standard" />
+              <TextField required fullWidth name="firstName" id="_firstName" label="First Name" type="text" variant="standard" />
+              <TextField required fullWidth id="_lastName" label="Last Name" name="lastName" type="text" variant="standard" />
               <TextField
                 required
                 fullWidth
-                id="email"
+                id="_email"
                 label="Email Address"
                 name="email"
                 type="text"
@@ -102,7 +114,33 @@ const SignUp = (props) => {
                 variant="standard"
               />
 
-              <TextField
+              <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+              <OutlinedInput
+                variant="standard"
+                fullWidth
+                margin="normal"
+                required
+                id="outlined-adornment-password"
+                type={values.showPassword ? 'text' : 'password'}
+                value={values.password}
+                onChange={handleChange('password')}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="Password"
+                name="password"
+              />
+
+              {/* <TextField
                 margin="normal"
                 required
                 fullWidth
@@ -111,7 +149,7 @@ const SignUp = (props) => {
                 type="password"
                 id="password"
                 variant="standard"
-              />
+              /> */}
               <TextField
                 margin="normal"
                 required
