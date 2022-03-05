@@ -42,7 +42,13 @@ const User = db.define('user', {
   subRole2: {
     type: STRING,
   },
-  profilePicture: {
+  profilePicture_URL: {
+    type: STRING,
+  },
+  linkedIn_URL: {
+    type: STRING,
+  },
+  gitHub_URL: {
     type: STRING,
   },
   // theme: {

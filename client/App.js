@@ -39,7 +39,7 @@ function App(props) {
         </div>
       ) : (
         <Switch>
-          <Route path="/welcome" exact component={Greetings} />
+          <Route path="/" exact component={Greetings} />
           <Route path="/login/" component={Login} />
           {/* <Route path="/create" component={SignUp} /> */}
         </Switch>

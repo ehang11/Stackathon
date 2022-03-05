@@ -20,7 +20,9 @@ router.get('/', async (req, res, next) => {
         'primaryRole',
         'subRole1',
         'subRole2',
-        'profilePicture',
+        'profilePicture_URL',
+        'linkedIn_URL',
+        'github_URL',
       ],
     });
     res.json(users);

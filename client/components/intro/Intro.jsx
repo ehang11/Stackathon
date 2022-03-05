@@ -1,8 +1,27 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { init } from 'ityped';
+import { updateAuth } from '../../store';
 
 function Intro() {
+  //for ityped functionality
   const textRef = useRef();
+  const { auth: user } = useSelector((state) => state);
+  const [userState, setUserState] = useState({
+    username: user.username || '',
+    firstName: user.firstName || '',
+    lastName: user.lastName || '',
+    email: user.email || '',
+    phoneNumber: user.phoneNumber || '',
+    // password: '',
+    primaryRole: user.primaryRole || '',
+    subRole1: user.subRole1 || user.primaryRole,
+    subRole2: user.subRole2 || user.primaryRole,
+    profilePicture_URL: user.profilePicture_URL || '',
+    linkedIn_URL: user.linkedIn_URL || '',
+    gitHub_URL: user.gitHub_URL || '',
+  });
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // console.log('view ityped-textRef----->', textRef);
@@ -14,6 +33,20 @@ function Intro() {
     });
   }, []);
 
+  const handleChange = (evt) => {
+    const { name, value } = evt.target;
+    setUserState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    dispatch(updateAuth({ ...user, ...userState }));
+    notify();
+    // history.push('/account');
+  };
   return (
     <div className="intro" id="/intro">
       <div className="intro-left">
@@ -24,7 +57,7 @@ function Intro() {
       <div className="intro-right">
         <div className="intro-wrapper">
           <h2 className="intro-greeting">Hi there, I'm</h2>
-          <h1 className="intro-name">Eric Hang</h1>
+          <h1 className="intro-name">{userState.firstName}</h1>
           <h3 className="intro-role">
             <span ref={textRef} className="subrole"></span>
             Developer
