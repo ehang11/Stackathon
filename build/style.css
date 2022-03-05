@@ -1,0 +1,793 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .work-arrow {
+    display: none;
+  }
+  .work-imgContainer {
+    width: 20px;
+    height: 20px;
+  }
+  .work-title {
+    font-size: 13px;
+  }
+
+  .work-container-item {
+    width: 80%;
+    height: 150px;
+    margin: 15px 0;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+:root {
+  /*---------------------------------------------Themes--------------------------------------------- */
+  /* ----Reference: https://visme.co/blog/website-color-schemes---- */
+  /* ----example: background-color: var(--main-dark)---- */
+  /* ----primary used for: default nav, hamburger,menu---- */
+  /* ----secondary used for:  nav:active,hamburger:active, menu: active---- */
+  /* ----accent1 used for: profile bgd, ityped subrole---- */
+  /* ----accent2: misc---- */
+
+  /* @@@Theme 1: KARD. default@@@ */
+  --main-dark: #202124;
+  --main-light: #d6d6d7;
+  --main-secondary: #323639;
+  --main-accent1: #fc4445;
+  --main-accent2: whitesmoke;
+  --main-accent3: rgb(142, 27, 27);
+  --main-accent4: #cafafe;
+
+  /* @@@Theme 2: Colorful-Balanced@@@ */
+  --theme2-primary: #41b3a3;
+  --theme2-text: white;
+  --theme2-secondary: #e27d60;
+  --theme2-accent1: #c38d9e;
+
+  /* @@@Theme 3: Cool-Fresh@@@ */
+  --theme3-primary: #5cdb95;
+  --theme3-text: #05386b;
+  --theme3-secondary: #edf5e1;
+  --theme3-accent1: #379683;
+
+  /* @@@Theme 4: Audacious-Vibrant@@@ */
+  --theme4-primary: #3feee6;
+  --theme4-text: #cafafe;
+  --theme4-secondary: #fc4445;
+  --theme4-accent1: #97caef;
+}
+
+/* ------------------------------------------------APP------------------------------------------------ */
+.app {
+  height: 100vh;
+}
+
+/* ------------------------------------------------_APP_------------------------------------------------ */
+
+/* ------------------------------------------------SECTIONS------------------------------------------------ */
+.sections {
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  position: relative;
+  top: 70px;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* hide scroll: for Firefox */
+  scroll-behavior: smooth;
+}
+
+.sections::-webkit-scrollbar {
+  display: none; /* hide scroll: for Chrome, Safari, and Opera */
+}
+
+.greeting-sections {
+  width: 100%;
+  height: calc(100vh - 70px);
+
+  position: relative;
+  top: 80px;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* hide scroll: for Firefox */
+  scroll-behavior: smooth;
+}
+
+.sections::-webkit-scrollbar {
+  display: none; /* hide scroll: for Chrome, Safari, and Opera */
+}
+
+/* -----------------------------CHILD OF SECTIONS----------------------------- */
+.sections > * {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  scroll-snap-align: start;
+}
+
+/* -----------------NavBar CSS----------------- */
+.nav {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
+}
+.nav > .wrapper,
+.wrapper-active {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left > .logo {
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: inherit;
+  margin-right: 40px;
+}
+.nav-left > .logo-active {
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: var(--main-light);
+  margin-right: 40px;
+}
+.itemContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.contact-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+.contact-span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-right {
+}
+.hamburger,
+.hamburger-active {
+  width: 32px;
+  height: 25px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger > span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-dark);
+  transform-origin: left;
+  transition: all 2s ease;
+}
+/* -----------------MENU CSS----------------- */
+.menu {
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-active {
+  width: 300px;
+  height: 100vh;
+  background-color: var(--main-dark);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+}
+.menu-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--main-light);
+  width: 60%;
+}
+.menu-ul > li {
+  margin-bottom: 25px;
+}
+.menu-ul > li > a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.menu-ul > li > a:hover {
+  font-weight: 500;
+}
+/* ---------------NavBar/ACTIVE--------------- */
+.nav-active {
+  width: 100%;
+  height: 70px;
+
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: var(--main-dark);
+  color: var(--main-light);
+}
+.hamburger-active > span {
+  width: 100%;
+  height: 3px;
+  transform-origin: left;
+  transition: all 2s ease;
+  background-color: white;
+}
+.hamburger-active > span:first-child {
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.hamburger-active > span:nth-child(2) {
+  background-color: white;
+  opacity: 0;
+}
+.hamburger-active > span:last-child {
+  background-color: white;
+  transform: rotate(-45deg);
+}
+/* -----------------------------_CHILD OF SECTIONS_----------------------------- */
+/* -----------------------------WELCOME CSS----------------------------- */
+.welcome-container {
+  background-color: white;
+  display: center;
+  background-color: white;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-between;
+}
+.welcome-top {
+  width: 100%;
+  height: calc(700vh / 10);
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+.img-profile.welcome {
+  width: 100%;
+  /* height: 100%; */
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  transition: all 5s ease;
+}
+.welcome-title {
+  width: 20%;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  z-index: 2;
+  font-size: 40px;
+  height: calc(100vh - 90vh);
+  padding-right: 10px;
+  transition: all 4s ease;
+  color: black;
+}
+
+.welcome-bottom {
+  /* background-color: yellow; */
+  overflow: hidden;
+  width: 100%;
+  height: calc(300vh / 10);
+  justify-content: center;
+  display: list-item;
+  color: var(--main-dark);
+}
+
+.welcome-bottom1 {
+  display: block;
+  align-self: center;
+  height: calc(150vh / 15);
+
+  padding: 5px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: line-through;
+  justify-content: center;
+  transform-origin: center;
+  transition: width 1s, height 1s, background-color 2s, transform 2s;
+}
+.welcome-bottom2 {
+  display: block;
+  align-self: center;
+  height: calc(150vh / 15);
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: line-through;
+  justify-content: center;
+  transform-origin: center;
+  /* transition: width 1s, background-color 2s, color 3s, transform 2s; */
+  transition: all 2s ease;
+  -webkit-transition: all 2s ease;
+}
+
+.welcome-bottom2:hover {
+  background-color: var(--main-secondary);
+  color: white;
+  width: 100%;
+  max-height: calc(150vh / 10);
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.welcome-bottom1:hover {
+  /* background-color: var(--main-dark);
+    color: white; */
+  color: black;
+  width: 100%;
+  height: calc(150vh / 12);
+  padding: 5px;
+  font-weight: 500;
+  font-size: 25px;
+  text-decoration: none;
+  justify-content: center;
+  align-self: center;
+  color: inherit;
+  cursor: pointer;
+}
+
+.welcome-bottom2 > .welcome-img-down {
+  width: 0px;
+  height: 0px;
+  display: block;
+  align-self: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.welcome-bottom2:hover > .welcome-img-down {
+  width: 30px;
+  height: 30px;
+
+  position: fixed;
+  bottom: 20px;
+  display: block;
+  align-self: center;
+  justify-content: center;
+  align-self: center;
+  animation: arrowBlink 3s infinite;
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}
+
+/* -----------------------------LOGIN CSS----------------------------- */
+.img-profile.login {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  transition: all 5s ease;
+}
+
+.welcome-back {
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+  z-index: 2;
+  font-size: 40px;
+  height: calc(100vh - 88vh);
+  transition: all 4s ease;
+  color: black;
+}
+.img-profile.login:hover {
+  background-color: #fc4445;
+  border: none;
+}
+/* .welcome-back:hover {
+  } */
+/* ----------------------------_LOGIN CSS_---------------------------- */
+/* -----------------------------SIGNUP CSS----------------------------- */
+.signup-container {
+  background-color: white;
+  display: flex;
+  padding-top: 30px;
+}
+.signup-container > .signup-left {
+  flex: 0;
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+.signup-container > .signup-right {
+  flex: 1;
+  /* background-color: yellow; */
+  overflow: hidden;
+  position: relative;
+}
+/* ----------------------------_SIGNUP CSS_---------------------------- */
+/* -----------------------------Intro CSS----------------------------- */
+.intro {
+  background-color: white;
+  display: flex;
+  padding-top: 30px;
+}
+.intro > .intro-left {
+  flex: 0.5;
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+.img-profile.intro {
+  width: 100vh;
+  height: 100vh;
+  background-color: var(--main-accent1);
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  float: right;
+}
+
+.img-profile > .img-profile-welcome {
+  height: 90%;
+  /* optional: image filters available via https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness() */
+  filter: brightness(1.15);
+}
+.img-profile.intro > .img-pfp {
+  height: 90%;
+}
+.intro > .intro-right {
+  flex: 0.5;
+  position: relative;
+}
+.intro-right > .intro-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.intro-wrapper > .intro-greeting {
+  font-size: 35px;
+  word-spacing: 6px;
+}
+.intro-wrapper > .intro-name {
+  font-size: 65px;
+  margin: 10px 0;
+  word-spacing: 10px;
+}
+
+.intro-wrapper > .intro-role {
+  font-size: 30px;
+  word-spacing: 6px;
+}
+.intro-right > a {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+.intro-role > .subrole {
+  font-size: inherit;
+  color: var(--main-accent1);
+}
+.ityped-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+a > .intro-img-down {
+  width: 30px;
+  padding-bottom: 2vh;
+  animation: arrowBlink 3s infinite;
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}
+/* -----------------------------_Intro CSS_----------------------------- */
+/* -----------------------------Portfolio CSS----------------------------- */
+.portfolio {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio > h1 {
+  padding-bottom: 3vh;
+  list-style: none;
+  display: flex;
+  font-size: 50px;
+}
+.portfolio > li {
+  font-size: 12px;
+  margin-right: 50px;
+  padding: 0.7px;
+}
+.portfolio > .portfolio-list {
+  margin: 10px;
+
+  padding-bottom: 1vh;
+  list-style: none;
+  display: flex;
+}
+.portfolio-list > li {
+  font-size: 16px;
+  margin-right: 50px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.portfolio-list > .li-active {
+  background-color: var(--main-dark);
+  color: var(--main-light);
+}
+.portfolio-container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+.portfolio-item {
+  width: 220px;
+  height: 150px;
+  border-radius: 20px;
+  border: 1px solid var(--main-secondary);
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-secondary);
+  position: relative;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.portfolio-item > .portfolio-title {
+  position: absolute;
+  font-size: 20px;
+}
+.portfolio-item > .portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.portfolio-item:hover {
+  background-color: var(--main-secondary);
+}
+.portfolio-item > .portfolio-img:hover {
+  opacity: 0.2;
+  z-index: 0;
+}
+/* ----------------------------_Portfolio CSS_----------------------------- */
+/* ----------------------------Works CSS---------------------------- */
+
+.work {
+  background-color: var(--main-accent1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.work-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-container-item {
+  width: 50vw;
+  height: 100%;
+  background-color: var(--main-accent4);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-container-item > .work-left {
+  flex: 4;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-container-item > .work-right {
+  flex: 8;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.work-arrow {
+  height: 50px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.work-arrow.work-left {
+  left: 100px;
+  transform: rotateY(180deg);
+}
+.work-arrow.work-right {
+  right: 100px;
+}
+
+.work-slider {
+  height: 46vh;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease-out;
+}
+
+.work-leftContainer {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work-left > .work-imgContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(245, 179, 155);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-imgContainer > img {
+  width: 4vw;
+  padding: 2vw;
+  border-radius: 50%;
+}
+
+.work-right > img {
+  width: 400px;
+  transform: rotate(-10deg);
+}
+.work-title {
+  font-size: 20px;
+}
+.work-leftContainer > p {
+  font-size: 13px;
+}
+.work-leftContainer > span {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* ---------------------------_Works CSS_--------------------------- */
+
+/* ----------------------------Contact CSS---------------------------- */
+.contact {
+  background-color: #effbff;
+  display: flex;
+}
+
+.contact > .contact-left {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-left > img {
+  /* justify-content: center; */
+}
+.contact > .contact-right {
+  flex: 1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-right > h2 {
+  font-size: 30px;
+}
+.contact-right > .work-form {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.work-form > input {
+  width: 300px;
+  height: 30px;
+  font-size: 14px;
+  border: none;
+}
+textarea {
+  width: 300px;
+  height: 200px;
+  font-size: 14px;
+  border: none;
+}
+button {
+  width: 180px;
+  height: 36px;
+  color: var(--main-accent2);
+  background-color: var(--main-accent1);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+span {
+  color: var(--main-accent3);
+}
+/* ---------------------------_Contact CSS_--------------------------- */
+/* ------------------------------------------------_SECTIONS_------------------------------------------------ */
