@@ -24920,16 +24920,14 @@ function Intro() {
     lastName: user.lastName || '',
     email: user.email || '',
     phoneNumber: user.phoneNumber || '',
-    // password: '',
     primaryRole: user.primaryRole || '',
     subRole1: user.subRole1 || user.primaryRole,
     subRole2: user.subRole2 || user.primaryRole,
-    profilePicture_URL: user.profilePicture_URL,
-    linkedIn_URL: user.linkedIn_URL || '',
-    gitHub_URL: user.gitHub_URL || ''
+    profilePicture_URL: user.profilePicture_URL // linkedIn_URL: user.linkedIn_URL || '',
+    // gitHub_URL: user.gitHub_URL || '',
+
   });
   const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
-  console.log('pfp link->', user.profilePicture_URL);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     // console.log('view ityped-textRef----->', textRef);
     (0,ityped__WEBPACK_IMPORTED_MODULE_2__.init)(textRef.current, {
@@ -24939,25 +24937,18 @@ function Intro() {
       backSpeed: 60,
       strings: [user.primaryRole, user.subRole1, user.subRole2]
     });
-  }, []);
-
-  const handleChange = evt => {
-    const {
-      name,
-      value
-    } = evt.target;
-    setUserState(prevState => ({ ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = evt => {
-    evt.preventDefault();
-    dispatch((0,_store__WEBPACK_IMPORTED_MODULE_3__.updateAuth)({ ...user,
-      ...userState
-    }));
-    notify(); // history.push('/account');
-  };
+  }, []); // const handleChange = (evt) => {
+  //   const { name, value } = evt.target;
+  //   setUserState((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
+  // const handleSubmit = (evt) => {
+  //   evt.preventDefault();
+  //   dispatch(updateAuth({ ...user, ...userState }));
+  //   notify();
+  // };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "intro",
@@ -25071,8 +25062,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _mui_icons_material_Mail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/icons-material/Mail */ "./node_modules/@mui/icons-material/Mail.js");
-/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _mui_icons_material_Mail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/icons-material/Mail */ "./node_modules/@mui/icons-material/Mail.js");
+/* harmony import */ var _mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/icons-material/Person */ "./node_modules/@mui/icons-material/Person.js");
+
 
 
 
@@ -25081,6 +25074,11 @@ function Nav({
   isActive,
   setActive
 }) {
+  const {
+    auth: user
+  } = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(state => state);
+  console.log('auth-->', user);
+  console.log('auth-->', user.phoneNumber);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: isActive ? 'nav-active' : 'nav'
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -25092,17 +25090,17 @@ function Nav({
     className: isActive ? 'logo-active' : 'logo'
   }, "KARD."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "itemContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_Person__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: "contact-icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "contact-span"
-  }, "2673042709")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, user.phoneNumber)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "itemContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_Mail__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mui_icons_material_Mail__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "contact-icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "contact-span"
-  }, "e.h@outlook.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, user.email))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "nav-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: isActive ? 'hamburger-active' : 'hamburger',

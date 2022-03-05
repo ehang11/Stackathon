@@ -14,16 +14,15 @@ function Intro() {
     lastName: user.lastName || '',
     email: user.email || '',
     phoneNumber: user.phoneNumber || '',
-    // password: '',
+
     primaryRole: user.primaryRole || '',
     subRole1: user.subRole1 || user.primaryRole,
     subRole2: user.subRole2 || user.primaryRole,
     profilePicture_URL: user.profilePicture_URL,
-    linkedIn_URL: user.linkedIn_URL || '',
-    gitHub_URL: user.gitHub_URL || '',
+    // linkedIn_URL: user.linkedIn_URL || '',
+    // gitHub_URL: user.gitHub_URL || '',
   });
   const dispatch = useDispatch();
-  console.log('pfp link->', user.profilePicture_URL);
 
   useEffect(() => {
     // console.log('view ityped-textRef----->', textRef);
@@ -35,20 +34,19 @@ function Intro() {
     });
   }, []);
 
-  const handleChange = (evt) => {
-    const { name, value } = evt.target;
-    setUserState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (evt) => {
+  //   const { name, value } = evt.target;
+  //   setUserState((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    dispatch(updateAuth({ ...user, ...userState }));
-    notify();
-    // history.push('/account');
-  };
+  // const handleSubmit = (evt) => {
+  //   evt.preventDefault();
+  //   dispatch(updateAuth({ ...user, ...userState }));
+  //   notify();
+  // };
   return (
     <div className="intro" id="/intro">
       <div className="intro-left">

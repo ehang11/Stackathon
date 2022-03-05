@@ -31,7 +31,7 @@ const User = db.define('user', {
     },
   },
   phoneNumber: {
-    type: INTEGER,
+    type: STRING,
   },
   primaryRole: {
     type: STRING,

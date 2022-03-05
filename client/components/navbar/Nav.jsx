@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import MailIcon from '@mui/icons-material/Mail';
 import PersonIcon from '@mui/icons-material/Person';
 function Nav({ isActive, setActive }) {
+  const { auth: user } = useSelector((state) => state);
+
+  console.log('auth-->', user);
+  console.log('auth-->', user.phoneNumber);
   return (
     <div className={isActive ? 'nav-active' : 'nav'}>
       <div className={isActive ? 'wrapper-active' : 'wrapper'}>
@@ -11,11 +16,11 @@ function Nav({ isActive, setActive }) {
           </a>
           <div className="itemContainer">
             <PersonIcon className="contact-icon" />
-            <span className="contact-span">2673042709</span>
+            <span className="contact-span">{user.phoneNumber}</span>
           </div>
           <div className="itemContainer">
             <MailIcon className="contact-icon" />
-            <span className="contact-span">e.h@outlook.com</span>
+            <span className="contact-span">{user.email}</span>
           </div>
         </div>
 
