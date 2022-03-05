@@ -1,6 +1,13 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../store';
 
 function Menu({ isActive, setActive }) {
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const { auth } = state;
+  const isLoggedIn = !!auth.id;
+  console.log('log auth.id--->', auth.id);
   return (
     <div className={isActive ? 'menu-active' : 'menu'}>
       <ul className="menu-ul">
@@ -16,6 +23,18 @@ function Menu({ isActive, setActive }) {
         <li onClick={() => setActive(false)}>
           <a href="contact">Contact</a>
         </li>
+        {isLoggedIn ? (
+          <li
+            onClick={() => {
+              dispatch(logout());
+              setActive(false);
+            }}
+          >
+            <a href="welcome">Logout</a>
+          </li>
+        ) : (
+          ''
+        )}
       </ul>
     </div>
   );
