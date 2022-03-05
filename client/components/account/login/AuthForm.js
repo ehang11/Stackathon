@@ -26,7 +26,7 @@ const AuthForm = (props) => {
 
   return (
     <div className="sections">
-      <div className="intro" id="login">
+      <div className="intro">
         <div className="intro-left">
           <h1 className="welcome-back">GREETINGS.</h1>
           <div className="img-profile login">
