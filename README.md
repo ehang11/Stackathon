@@ -36,3 +36,26 @@ Test Accounts (seed.js):
 * **Add/Remove Projects + Works** *
 * **Dynamic Links containing unique usernames** *
 * **Bug fixes** *
+
+
+## Tools/Resources
+
+Pallete inspirations
+- https://visme.co/blog/website-color-schemes
+
+Art
+-https://dribbble.com/
+-https://www.pinterest.com/
+
+Headshots/Imaging tools
+-https://unsplash.com/s/photos/headshot
+-https://imgbb.com/
+-https://www.remove.bg/upload
+
+CSS and Design
+-https://bennettfeely.com/clippy/
+-Youtube Videos
+-https://www.npmjs.com/package/ityped
+-https://mui.com/
+-https://css-tricks.com/theming-and-theme-switching-with-react-and-styled-components/
+
