@@ -37,15 +37,44 @@ export const me = () => async (dispatch) => {
   }
 };
 
-export const authenticate = (username, password, method, email) => async (dispatch) => {
-  try {
-    const res = await axios.post(`/auth/${method}`, { username, password, email });
-    window.localStorage.setItem(TOKEN, res.data.token);
-    dispatch(me());
-  } catch (authError) {
-    return dispatch(setAuth({ error: authError }));
-  }
-};
+export const authenticate =
+  (
+    username,
+    password,
+    method,
+    email,
+    firstName,
+    lastName,
+    phoneNumber,
+    primaryRole,
+    subRole1,
+    subRole2,
+    profilePicture_URL,
+    linkedIn_URL,
+    gitHub_URL
+  ) =>
+  async (dispatch) => {
+    try {
+      const res = await axios.post(`/auth/${method}`, {
+        username,
+        password,
+        email,
+        firstName,
+        lastName,
+        phoneNumber,
+        primaryRole,
+        subRole1,
+        subRole2,
+        profilePicture_URL,
+        linkedIn_URL,
+        gitHub_URL,
+      });
+      window.localStorage.setItem(TOKEN, res.data.token);
+      dispatch(me());
+    } catch (authError) {
+      return dispatch(setAuth({ error: authError }));
+    }
+  };
 
 export const logout = () => {
   window.localStorage.removeItem(TOKEN);

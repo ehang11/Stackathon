@@ -34,36 +34,6 @@ const theme = createTheme();
 const SignUp = (props) => {
   const { name, handleSubmit, error } = props;
   const { auth: user } = useSelector((state) => state);
-  const [values, setValues] = useState({
-    username: user.username || '',
-    firstName: user.firstName || '',
-    lastName: user.lastName || '',
-    email: user.email || '',
-    phoneNumber: user.phoneNumber || '',
-
-    primaryRole: user.primaryRole || '',
-    subRole1: user.subRole1 || user.primaryRole,
-    subRole2: user.subRole2 || user.primaryRole,
-    profilePicture_URL: user.profilePicture_URL || '',
-    linkedIn_URL: user.linkedIn_URL || '',
-    gitHub_URL: user.gitHub_URL || '',
-    password: '',
-    showPassword: false,
-  });
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
 
   return (
     <div className="sections">
@@ -114,33 +84,7 @@ const SignUp = (props) => {
                 variant="standard"
               />
 
-              <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-              <OutlinedInput
-                variant="standard"
-                fullWidth
-                margin="normal"
-                required
-                id="outlined-adornment-password"
-                type={values.showPassword ? 'text' : 'password'}
-                value={values.password}
-                onChange={handleChange('password')}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                label="Password"
-                name="password"
-              />
-
-              {/* <TextField
+              <TextField
                 margin="normal"
                 required
                 fullWidth
@@ -149,7 +93,7 @@ const SignUp = (props) => {
                 type="password"
                 id="password"
                 variant="standard"
-              /> */}
+              />
               <TextField
                 margin="normal"
                 required
@@ -247,11 +191,38 @@ const mapDispatch = (dispatch) => {
     handleSubmit(evt) {
       evt.preventDefault();
       const formName = evt.target.name;
+      const username = evt.target.username.value;
+      const password = evt.target.password.value;
       const firstName = evt.target.firstName.value;
       const lastName = evt.target.lastName.value;
       const email = evt.target.email.value;
-      const password = evt.target.password.value;
-      dispatch(authenticate(username, password, formName, email));
+
+      //not requested
+      const phoneNumber = evt.target.phoneNumber.value || '';
+      const primaryRole = evt.target.primaryRole.value || '';
+      const subRole1 = evt.target.subRole1.value || '';
+      const subRole2 = evt.target.subRole2.value || '';
+      const profilePicture_URL = evt.target.profilePicture_URL.value || '';
+      const linkedIn_URL = evt.target.linkedIn_URL.value || '';
+      const gitHub_URL = evt.target.gitHub_URL.value || '';
+
+      dispatch(
+        authenticate(
+          username,
+          password,
+          formName,
+          email,
+          firstName,
+          lastName,
+          phoneNumber,
+          primaryRole,
+          subRole1,
+          subRole2,
+          profilePicture_URL,
+          linkedIn_URL,
+          gitHub_URL
+        )
+      );
     },
   };
 };

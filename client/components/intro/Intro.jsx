@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { init } from 'ityped';
-import { updateAuth } from '../../store';
+import { me, updateAuth } from '../../store';
 
 function Intro() {
   //for ityped functionality
@@ -19,10 +19,14 @@ function Intro() {
     subRole1: user.subRole1 || user.primaryRole,
     subRole2: user.subRole2 || user.primaryRole,
     profilePicture_URL: user.profilePicture_URL,
-    // linkedIn_URL: user.linkedIn_URL || '',
-    // gitHub_URL: user.gitHub_URL || '',
+    linkedIn_URL: user.linkedIn_URL || '',
+    gitHub_URL: user.gitHub_URL || '',
   });
   const dispatch = useDispatch();
+  // useEffect(async () => {
+  //   await dispatch(me());
+  //   setUserState(auth.id);
+  // }, []);
 
   useEffect(() => {
     // console.log('view ityped-textRef----->', textRef);

@@ -16,10 +16,31 @@ import SignUp from './components/account/SignUp';
 import Greetings from './components/account/Greetings';
 
 function App(props) {
-  const state = useSelector((state) => state);
-  const { auth } = state;
+  const { auth } = useSelector((state) => state);
+
+  console.log('state.auth-->', auth.username);
+  const [userState, setUserState] = useState({
+    username: auth.username || '',
+    firstName: auth.firstName || '',
+    lastName: auth.lastName || '',
+    email: auth.email || '',
+    phoneNumber: auth.phoneNumber || '',
+
+    primaryRole: auth.primaryRole || '',
+    subRole1: auth.subRole1 || auth.primaryRole,
+    subRole2: auth.subRole2 || auth.primaryRole,
+    profilePicture_URL: auth.profilePicture_URL,
+    linkedIn_URL: auth.linkedIn_URL || '',
+    gitHub_URL: auth.gitHub_URL || '',
+  });
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(me());
+    setUserState(auth.id);
+  }, []);
   const isLoggedIn = !!auth.id;
   // const dispatch = useDispatch();
+
   console.log('log auth.id--->', auth.id);
 
   //active toggle with useState hook

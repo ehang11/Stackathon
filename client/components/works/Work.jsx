@@ -30,8 +30,8 @@ function Work() {
     direction === 'left' ? setSlider(slide > 0 ? slide - 1 : 2) : setSlider(slide < data.length - 1 ? slide + 1 : 0);
   };
   return (
-    <div className="work" id="work">
-      <div className="work-slider" style={{ transform: `translateX(-${slide * 100}vw)` }}>
+    <div className="work">
+      <div className="work-slider" id="work" style={{ transform: `translateX(-${slide * 100}vw)` }}>
         {data.map((d) => (
           <div className="work-container">
             <div className="work-container-item">
