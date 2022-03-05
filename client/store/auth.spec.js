@@ -51,7 +51,7 @@ describe('thunk creators', () => {
         };
       });
       it('eventually dispatches the SET_AUTH action', async () => {
-        const fakeUser = { username: 'Cody' };
+        const fakeUser = { username: 'Code_Mitrix' };
         mockAxios.onGet('/auth/me').replyOnce(200, fakeUser);
         await store.dispatch(me());
         const actions = store.getActions();
@@ -70,7 +70,7 @@ describe('thunk creators', () => {
         };
       });
       it('does not dispatch GET USER action', async () => {
-        const fakeUser = { username: 'Cody' };
+        const fakeUser = { username: 'Code_Mitrix' };
         mockAxios.onGet('/auth/me').replyOnce(200, fakeUser);
         await store.dispatch(me());
         const actions = store.getActions();

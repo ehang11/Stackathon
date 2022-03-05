@@ -24936,7 +24936,7 @@ function Intro() {
       backDelay: 1500,
       //1.5s
       backSpeed: 60,
-      strings: ['Software', 'Frontend', 'Fullstack']
+      strings: [user.primaryRole, user.subRole1, user.subRole2]
     });
   }, []);
 
@@ -24977,7 +24977,7 @@ function Intro() {
     className: "intro-greeting"
   }, "Hi there, I'm"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "intro-name"
-  }, userState.firstName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+  }, userState.firstName, " ", userState.lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "intro-role"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     ref: textRef,

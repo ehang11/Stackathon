@@ -16,27 +16,61 @@ async function seed() {
   // Creating Users
   const users = await Promise.all([
     User.create({
-      username: 'cody',
+      username: 'Code_Mitrix',
       password: '123',
       firstName: 'Cody',
-      lastName: 'Smith',
+      lastName: 'Mitri',
       email: 'cody@gmail.com',
       phoneNumber: 222 - 224 - 4242,
+      primaryRole: 'Software',
+      subRole1: 'Frontend',
+      subRole2: 'Fullstack',
+      profilePicture_URL: 'https://ibb.co/L5Gm0gD',
+      linkedIn_URL: 'https://www.linkedin.com/',
+      gitHub_URL: 'https://github.com/',
     }),
     User.create({
-      username: 'murphy',
+      username: 'SamBennett',
       password: '123',
-      firstName: 'Murphy',
-      lastName: 'Thompson',
-      email: 'murphy@gmail.com',
+      firstName: 'Sam',
+      lastName: 'Bennett',
+      email: 'SamHam@gmail.com',
       phoneNumber: 222 - 224 - 4242,
+      primaryRole: 'Software',
+      subRole1: 'Frontend',
+      subRole2: 'Fullstack',
+      profilePicture_URL: 'https://ibb.co/c3jWhGV',
+      linkedIn_URL: 'https://www.linkedin.com/',
+      gitHub_URL: 'https://github.com/',
     }),
     User.create({
-      username: 'eric',
+      username: 'Shedrack',
+      password: '123',
+      firstName: 'Shedrack',
+      lastName: 'Salami',
+      email: 'SSalami@gmail.com',
+      phoneNumber: 222 - 224 - 4242,
+      primaryRole: 'Software',
+      subRole1: 'Frontend',
+      subRole2: 'Fullstack',
+      profilePicture_URL: 'https://ibb.co/PYz2CgW',
+      linkedIn_URL: 'https://www.linkedin.com/',
+      gitHub_URL: 'https://github.com/',
+    }),
+
+    User.create({
+      username: 'Jackson1998',
       password: 'nice',
-      email: 'ehang@gmail.com',
       firstName: 'Eric',
       lastName: 'Jackson',
+      email: 'eJackson@gmail.com',
+      phoneNumber: 222 - 224 - 4242,
+      primaryRole: 'Software',
+      subRole1: 'Frontend',
+      subRole2: 'Fullstack',
+      profilePicture_URL: 'https://ibb.co/qdzFZL5',
+      linkedIn_URL: 'https://www.linkedin.com/in/ehang11/',
+      gitHub_URL: 'https://github.com/ehang11',
     }),
   ]);
 
@@ -45,9 +79,10 @@ async function seed() {
   console.log(`seeded successfully`);
   return {
     users: {
-      cody: users[0],
-      murphy: users[1],
-      eric: users[2],
+      Code_Mitrix: users[0],
+      SamBennett: users[1],
+      Shedrack: users[2],
+      Jackson1998: users[3],
     },
   };
 }

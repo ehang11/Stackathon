@@ -6,6 +6,7 @@ import { updateAuth } from '../../store';
 function Intro() {
   //for ityped functionality
   const textRef = useRef();
+
   const { auth: user } = useSelector((state) => state);
   const [userState, setUserState] = useState({
     username: user.username || '',
@@ -29,7 +30,7 @@ function Intro() {
       showCursor: true,
       backDelay: 1500, //1.5s
       backSpeed: 60,
-      strings: ['Software', 'Frontend', 'Fullstack'],
+      strings: [user.primaryRole, user.subRole1, user.subRole2],
     });
   }, []);
 
@@ -57,7 +58,9 @@ function Intro() {
       <div className="intro-right">
         <div className="intro-wrapper">
           <h2 className="intro-greeting">Hi there, I'm</h2>
-          <h1 className="intro-name">{userState.firstName}</h1>
+          <h1 className="intro-name">
+            {userState.firstName} {userState.lastName}
+          </h1>
           <h3 className="intro-role">
             <span ref={textRef} className="subrole"></span>
             Developer
