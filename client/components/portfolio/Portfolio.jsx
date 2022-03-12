@@ -1,35 +1,56 @@
 import React, { useEffect, useState } from 'react';
-
+import PortfolioList from './PortfolioList';
+import { featuredPortfolio, wineStore, portfolioCreator } from './data';
 const Portfolio = () => {
   const [selected, setSelected] = useState('featured');
   const [data, setData] = useState([]);
+
+  const list = [
+    {
+      id: 'featured',
+      title: 'Featured',
+    },
+    {
+      id: 'wine',
+      title: 'Wine Shop',
+    },
+    {
+      id: 'kard',
+      title: 'Portfolio Creator',
+    },
+  ];
+
+  useEffect(() => {
+    switch (selected) {
+      case 'featured':
+        setData(featuredPortfolio);
+        break;
+      case 'wine':
+        setData(wineStore);
+        break;
+      case 'kard':
+        setData(portfolioCreator);
+        break;
+      default:
+        setData(featuredPortfolio);
+    }
+  }, [selected]);
+
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1 className="portfolio-header">Portfolio</h1>
       <ul className="portfolio-list">
-        <li className="li-active">Featured</li>
-        <li>E-Commerce Store</li>
-        <li>Web App</li>
-        <li>Web App</li>
-        <li>Web App</li>
+        {list.map((item) => (
+          <PortfolioList title={item.title} active={selected === item.id} setSelected={setSelected} id={item.id} />
+        ))}
       </ul>
       <div className="portfolio-container">
-        <div className="portfolio-item">
-          <img src="assets/empty-project.png" alt="" className="portfolio-img" />
-          <h3 className="portfolio-title">In Vino Veritas</h3>
-        </div>
-        <div className="portfolio-item">
-          <h3 className="portfolio-title">Blank</h3>
-          <img src="assets/empty-project.png" alt="" className="portfolio-img" />
-        </div>
-        <div className="portfolio-item">
-          <img src="assets/empty-project.png" alt="" className="portfolio-img" />
-          <h3 className="portfolio-title">Project: Placeholder</h3>
-        </div>
-        <div className="portfolio-item">
-          <img src="assets/empty-project.png" alt="" className="portfolio-img" />
-          <h3 className="portfolio-title">Project: Placeholder 2</h3>
-        </div>
+        {data.map((d) => (
+          <div className="portfolio-item">
+            <img className="portfolio-img" src={d.img} alt="" />
+            <h3 className="portfolio-title">{d.title}</h3>
+          </div>
+        ))}
       </div>
     </div>
   );

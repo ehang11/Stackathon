@@ -1,7 +1,9 @@
 import React from 'react';
 
-function PortfolioList() {
-  return <div>PortfolioList</div>;
+export default function PortfolioList({ id, title, active, setSelected }) {
+  return (
+    <li className={active ? 'portfolioList active' : 'portfolioList'} onClick={() => setSelected(id)}>
+      {title}
+    </li>
+  );
 }
-
-export default PortfolioList;

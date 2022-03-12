@@ -555,7 +555,7 @@ a > .intro-img-down {
   flex-direction: column;
   align-items: center;
 }
-.portfolio > h1 {
+.portfolio-header {
   padding-bottom: 3vh;
   list-style: none;
   display: flex;
@@ -566,10 +566,9 @@ a > .intro-img-down {
   margin-right: 50px;
   padding: 0.7px;
 }
-.portfolio > .portfolio-list {
+.portfolio-list {
   margin: 10px;
-
-  padding-bottom: 1vh;
+  padding: 0;
   list-style: none;
   display: flex;
 }
@@ -589,18 +588,18 @@ a > .intro-img-down {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
-.portfolio-item {
+.portfolio-container > .portfolio-item {
   width: 220px;
   height: 150px;
   border-radius: 20px;
-  border: 1px solid var(--main-secondary);
+  border: 1px solid rgb(240, 239, 239);
   margin: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--main-secondary);
+  color: white;
   position: relative;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -615,13 +614,14 @@ a > .intro-img-down {
   object-fit: cover;
   z-index: 1;
 }
-.portfolio-item:hover {
+.portfolio-container > .portfolio-item:hover {
   background-color: var(--main-secondary);
 }
 .portfolio-item > .portfolio-img:hover {
   opacity: 0.2;
   z-index: 0;
 }
+
 /* ----------------------------_Portfolio CSS_----------------------------- */
 /* ----------------------------Works CSS---------------------------- */
 

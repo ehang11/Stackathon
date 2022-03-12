@@ -16,55 +16,12 @@ async function seed() {
   // Creating Users
   const users = await Promise.all([
     User.create({
-      username: 'Code_Mitrix',
+      username: 'ehang11',
       password: '123',
-      firstName: 'Cody',
-      lastName: 'Mitri',
-      email: 'cody@gmail.com',
-      phoneNumber: '267 - 404 - 8809',
-      primaryRole: 'Software',
-      subRole1: 'Backend',
-      subRole2: 'React',
-      profilePicture_URL: 'https://i.ibb.co/vxd77Dr/disruptivo-Xaen-acs-LLo-unsplash-removebg-preview.png',
-      linkedIn_URL: 'https://www.linkedin.com/',
-      gitHub_URL: 'https://github.com/',
-    }),
-    User.create({
-      username: 'SamBennett',
-      password: '123',
-      firstName: 'Sam',
-      lastName: 'Bennett',
-      email: 'SamHam@gmail.com',
-      phoneNumber: '626 - 400 - 3207',
-      primaryRole: 'Software',
-      subRole1: 'Blockchain',
-      subRole2: 'Web',
-      profilePicture_URL: 'https://i.ibb.co/sRXvL3v/Sam-Bennett.png',
-      linkedIn_URL: 'https://www.linkedin.com/',
-      gitHub_URL: 'https://github.com/',
-    }),
-    User.create({
-      username: 'Shedrack',
-      password: '123',
-      firstName: 'Shedrack',
-      lastName: 'Salami',
-      email: 'SSalami@gmail.com',
-      phoneNumber: '222 - 500 - 8242',
-      primaryRole: 'Software',
-      subRole1: 'Enterprise',
-      subRole2: 'Backend',
-      profilePicture_URL: 'https://i.ibb.co/TTqQht0/shedrack-salami-Ba1e-Gc-AFj5w-unsplash-removebg-preview.png',
-      linkedIn_URL: 'https://www.linkedin.com/',
-      gitHub_URL: 'https://github.com/',
-    }),
-
-    User.create({
-      username: 'ehang',
-      password: 'nice',
       firstName: 'Eric',
       lastName: 'Hang',
-      email: 'eJackson@gmail.com',
-      phoneNumber: '215 - 401 - 4242',
+      email: 'ehang11@gmail.com',
+      phoneNumber: '267 - 304 - 2709',
       primaryRole: 'Software',
       subRole1: 'Frontend',
       subRole2: 'Fullstack',
@@ -79,10 +36,7 @@ async function seed() {
   console.log(`seeded successfully`);
   return {
     users: {
-      Code_Mitrix: users[0],
-      SamBennett: users[1],
-      Shedrack: users[2],
-      Jackson1998: users[3],
+      // ehang11: users[0],
     },
   };
 }
