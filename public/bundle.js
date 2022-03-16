@@ -9699,9 +9699,9 @@ function Nav({
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: isActive ? 'line1-active' : 'line1'
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: isActive ? 'line2-active' : 'line1'
+    className: isActive ? 'line2-active' : 'line2'
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: isActive ? 'line3-active' : 'line1'
+    className: isActive ? 'line3-active' : 'line3'
   })))));
 }
 
