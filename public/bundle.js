@@ -9917,10 +9917,10 @@ function Work() {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "work"
+    className: "work",
+    id: "work"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "work-slider",
-    id: "work",
     style: {
       transform: `translateX(-${slide * 100}vw)`
     }
