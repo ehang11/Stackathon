@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "net": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
     "seed": "node script/seed.js",
     "start": "node server",
