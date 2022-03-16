@@ -24,8 +24,8 @@ function Nav({ isActive, setActive }) {
         <div className="nav-right">
           <div className={isActive ? 'hamburger-active' : 'hamburger'} onClick={() => setActive(!isActive)}>
             <span className={isActive ? 'line1-active' : 'line1'}></span>
-            <span className={isActive ? 'line2-active' : 'line1'}></span>
-            <span className={isActive ? 'line3-active' : 'line1'}></span>
+            <span className={isActive ? 'line2-active' : 'line2'}></span>
+            <span className={isActive ? 'line3-active' : 'line3'}></span>
           </div>
         </div>
       </div>
