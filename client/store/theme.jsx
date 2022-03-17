@@ -1,6 +1,3 @@
-// theme switching using Context API and styled componenents
-// https://jscircle.com/react-theme-switching-with-context-api-and-styled-components/
-
 import { createContext, useReducer } from 'react';
 export const ThemeContext = createContext();
 

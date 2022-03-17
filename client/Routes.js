@@ -20,10 +20,10 @@ class Routes extends Component {
 
     return (
       <div>
-        <Switch>
+        {/* <Switch>
           <Route path="/" />
           <Route path="/home" />
-        </Switch>
+        </Switch> */}
       </div>
     );
   }
