@@ -10,7 +10,6 @@ function Intro() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // console.log('view ityped-textRef----->', textRef);
     init(textRef.current, {
       showCursor: true,
       backDelay: 1500, //1.5s
